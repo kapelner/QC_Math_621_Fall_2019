@@ -1,6 +1,6 @@
 # MATH 368 / 621 Fall 2019
 
-This is the course homepage for Math 368 / 621 for the Fall semester 2017 at Queens College, City University of New York taught by Professor Adam Kapelner. The syllabus can be found [here](https://raw.githubusercontent.com/kapelner/QC_Math_621_Fall_2019/master/syllabus/syllabus.pdf). This course parallels the previous time it was taught and the previous course homepage is [here](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/final/final_solutions.pdf).
+This is the course homepage for Math 368 / 621 for the Fall semester 2017 at Queens College, City University of New York taught by Professor Adam Kapelner. The syllabus can be read [here](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/syllabus/syllabus.pdf) and downloaded [here](https://raw.githubusercontent.com/kapelner/QC_Math_621_Fall_2019/master/syllabus/syllabus.pdf). This course parallels the previous time it was taught and the previous course homepage is [here](https://github.com/kapelner/QC_Math_621_Fall_2017).
 
 ## Schedule Announcement
 
