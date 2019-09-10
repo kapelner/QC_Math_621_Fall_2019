@@ -26,7 +26,7 @@ The path to success in this class is to do many problems. Unlike other courses, 
 
 Reading is still \textit{required}. For this homework set, review Math 241 concerning random variables, support, parameter space, PMF's, CDF's, bernoulli, binomial, geometric. Then read on your own about the negative binomial, convolutions and the multinomial distribution.
 
-The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. \qu{[MA]} are for those registered for 621 and extra credit otherwise.
 
 This homework is worth 100 points but the point distribution will not be determined until after the due date. See syllabus for the policy on late homework.
 
@@ -84,9 +84,9 @@ NAME: \line(1,0){380}
 
 \easysubproblem{Let $X_1 \sim \bernoulli{p_1}$ independent of $X_2 \sim \bernoulli{p_2}$. Find the JMF of for $X_1, X_2$. Denote it using a 2 $\times$ 2 grid or the piecewise function notation.}\spc{6}
 
-\easysubproblem{Use the JMF of for $X_1, X_2$ to find the PMF for $T = X_1 + X_2$. Denote it using the piecewise function notation.}\spc{3}
+\easysubproblem{Use the JMF of for $X_1, X_2$ to find the PMF for $T = X_1 + X_2$. Denote it using the piecewise function notation.} \\ \inred{Skip this problem}\spc{3}
 
-\intermediatesubproblem{Prove the PMF of $T = X_1 + X_2$ using the appropriate discrete convolution formula . Show that the function reduces to the piecewise function in (c) when substituting for the values of $t$. }\spc{6}
+\intermediatesubproblem{Prove the PMF of $T = X_1 + X_2$ using the appropriate discrete convolution formula . Show that the function reduces to the piecewise function in (c) when substituting for the values of $t$. } \\ \inred{Skip this problem}\spc{6}
 
 
 \hardsubproblem{Let 
@@ -109,7 +109,7 @@ Find the PMF of $T = X_1 + X_2$ using a convolution. Denote it using the piecewi
 \hardsubproblem{Prove the PMF of a binomial inductively using convolutions on the sequence of r.v.'s $\Xoneton \iid \bernoulli{p}$. You will need to use Pascal's Triangle combinatorial identity we employed in class.}\spc{9}
 
 
-\hardsubproblem{[MA] Prove the PMF of a negative binomial inductively using convolutions on the sequence of r.v.'s $\Xoneton \iid \geometric{p}$. You will need to use the \href{https://en.wikipedia.org/wiki/Hockey-stick_identity}{hockey stick identity}.}\spc{9}
+\hardsubproblem{[MA] Prove the PMF of a negative binomial inductively using convolutions on the sequence of r.v.'s $\Xoneton \iid \geometric{p}$. You will need to use the \qu{hockey stick identity} \href{https://en.wikipedia.org/wiki/Hockey-stick_identity}{[click here]}.}\spc{9}
 
 \hardsubproblem{Let $X_1 \sim \binomial{n_1}{p}$ independent of $X_2 \sim \binomial{n_2}{p}$. Find the PMF of the sum of $T = X_1 + X_2$ using a convolution.}\spc{13}
 
@@ -165,7 +165,7 @@ Find the PMF of $T = X_1 + X_2$ using a convolution. Denote it using the piecewi
 %\intermediatesubproblem{If $\X \sim \multinomial{n}{\p}$ and $n= 10$ and $\p = \bracks{0.2, 0.8}^\top$, find $\muvec := \expe{\X}$.}\spc{2}
 
 
-\hardsubproblem{[MA] If $\X_1 \sim \multinomial{n}{\p}$ and independently $\X_2 \sim \multinomial{n}{\p}$ where $\dime{\X_1} = \dime{\X_2} = k$. Find the JMF of $\T_2 = \X_1 + \X_2$ from the definition of convolution. This looks harder than it is! First, use the definition of convolution and factor out the terms that are not a function of $x_1, \ldots, x_K$. Finally, use Theorem 1 in \href{http://www.lrecits.usthb.dz/1.3.pdf}{this paper} for the summation.}\spc{9}
+\hardsubproblem{[MA] If $\X_1 \sim \multinomial{n}{\p}$ and independently $\X_2 \sim \multinomial{n}{\p}$ where $\dime{\X_1} = \dime{\X_2} = k$. Find the JMF of $\T_2 = \X_1 + \X_2$ from the definition of convolution. This looks harder than it is! First, use the definition of convolution and factor out the terms that are not a function of $x_1, \ldots, x_K$. Finally, use Theorem 1 in this paper: \href{http://www.lrecits.usthb.dz/1.3.pdf}{[click here]} for the summation.}\spc{9}
 
 \end{enumerate}
 
