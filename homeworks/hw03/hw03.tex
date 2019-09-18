@@ -7,12 +7,12 @@
 
 
 
-\title{MATH 368/621 Fall 2019 Homework \#3 DRAFT}
+\title{MATH 368/621 Fall 2019 Homework \#3}
 
 \author{Professor Adam Kapelner} %STUDENTS: write your name here
 
 \iftoggle{professormode}{
-\date{Due under the door of KY604 11:59PM Monday, October 7, 2019 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+\date{Due under the door of KY604 11:59PM Friday, October 4, 2019 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
 }
 
 \renewcommand{\abstractname}{Instructions and Philosophy}
@@ -85,7 +85,7 @@ The document is available with spaces for you to write your answers. If not usin
 
 \begin{enumerate}
 
-\intermediatesubproblem{Let $X_1, X_2 \iid \geometric{p}$ and $T = X_1 + X_2$. Find the PMF of $X_1~|~T = t$ and notate it using a brand name random variance e.g. binomial, poisson, etc. The answer may surprise you. Conditional probability is very weird!}\spc{7}
+\hardsubproblem{Let $X_1, X_2 \iid \geometric{p}$ and $T = X_1 + X_2$. Find the PMF of $X_1~|~T = t$ and notate it using a brand name random variance e.g. binomial, poisson, etc. The answer may surprise you. Conditional probability is very weird!}\spc{7}
 
 
 \intermediatesubproblem{[MA] Let $X_1, X_2 \iid \binomial{n}{p}$ and $T = X_1 + X_2$. Show that $X_1~|~T = t$ is hypergeometric. You can find information about this r.v. online. Note we did not / will not study the hypergeometric further and it will not be covered on any exams.}\spc{7}
@@ -150,22 +150,33 @@ f_{X+Y}(t) = f_X(x) * f_Y(x) &:=& \int\displaylimits_\reals f_{X,Y}(x, t-x) dx \
 
 \easysubproblem{If $X_1 \sim \uniform{a_1}{b_1}$ and $X_2 \sim \uniform{a_2}{b_2}$ independently, find $\support{T}$ where $T = X_1 + X_2$.}\spc{0}
 
-\intermediatesubproblem{Find $f_T(t)$ using the convolution.}\spc{15}~\vspace{1cm}
+\hardsubproblem{Find $f_T(t)$ using the convolution.}\spc{15}~\vspace{1cm}
 
 
 \end{enumerate}
 
 
-\problem{This question reviews the Exponential distribution.}
+\problem{This question reviews the Exponential distribution and introduces the Erland distribution.}
 
 \begin{enumerate}
 
 \easysubproblem{Derive the Exponential from the Geometric r.v. as we did in class. Find its CDF, PMF and PDF. Make sure the CDF, PMF and PDF are valid $\forall x \in \reals$. Illustrate the PDF and CDF.}\spc{10}
 
-\intermediatesubproblem{Show that for any exponential r.v. with rate parameter $\lambda$ the distribution is \qu{memoryless} meaning that for any $c$, a positive constant, $\cprob{X > x + c}{X > c} = \prob{X > x}$.}\spc{10}
+
+\easysubproblem{Let $X_1, \ldots, X_k \iid \exponential{\lambda}$. Show that the sum $T = X_1 + \ldots + X_k \sim \erlang{k}{\lambda}$ by finding its PDF.}\spc{10}
 
 
 
+\easysubproblem{Find the expectation of $T \sim \erlang{k}{\lambda}$. Use the linearity rules!}\spc{1}
+
+\easysubproblem{Find the variance of $T \sim \erlang{k}{\lambda}$. Use the linearity rules!}\spc{3}
+
+\easysubproblem{Why is the geometric distribution analogous to the exponential distribution? Why is the negative binomial distribution analogous to the erlang distribution?}\spc{3}
+
+\easysubproblem{If the length of time (in minutes) of a phone call is distributed $\exponential{0.5}$ and all phone call lengths are $\iid$, find an expression for the probability that the total sum time of 37 phone calls lasts longer than 17 minutes.}\spc{2}
+
+
+\intermediatesubproblem{Show that for any exponential r.v. with rate parameter $\lambda$ the distribution is \qu{memoryless} meaning that for any $c$, a positive constant, $\cprob{X > x + c}{X > c} = \prob{X > x}$.}\spc{3}
 
 \end{enumerate}
 
