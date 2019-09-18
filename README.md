@@ -73,7 +73,7 @@ This class has prerequesites of basic probability (Math 241), some linear algebr
 
 ## Practice Exams
 
-* Midterm I [(exam)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm1/midterm1.pdf) [(solutions)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm1/midterm1_solutions.pdf)
+* Midterm I [(exam)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm1/midterm1.pdf) [(solutions)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm1/midterm1_solutions.pdf) You are not responsible for 1a-c, g, 2a-c.
 
 * Midterm II [(exam)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm2/midterm2.pdf) [(solutions)](https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/exams/midterm2/midterm2_solutions.pdf)
 
