@@ -1,0 +1,203 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Math 368 / 621 Fall 2019 \\ Midterm Examination One}
+\author{Professor Adam Kapelner}
+
+\date{Septmeber 25, 2019}
+
+\begin{document}
+\maketitle
+
+\noindent Full Name \line(1,0){220} Circle Section and Class: A~B~C ~~ 368~621 
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using an unauthorized cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+\noindent I acknowledge and agree to uphold this Code of Academic Integrity. \\
+
+\begin{center}
+\line(1,0){250} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\vspace{-1cm}
+\section*{Instructions}
+
+This exam is seventy five minutes and closed-book. You are allowed one page (front and back) of a \qu{cheat sheet.} You may use a graphing calculator of your choice. Please read the questions carefully. If the question reads \qu{compute,} this means the solution will be a number otherwise you can leave the answer in choose, permutation, exponent, factorial or any other notation which could be resolved to a number with a computer. Questions marked \qu{[MA]} are required for those enrolled in 621 and extra credit for those enrolled in 368. If you are enrolled in 368, I advise you to finish the other questions on the exam and only then attempt the extra credit. I also advise you to use pencil. The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+\problem Below are some theoretical exercises.
+
+
+\benum
+
+\subquestionwithpoints{6} Compute as best as possible: $\displaystyle\sum_{x_1 \in \reals} \displaystyle\sum_{x_2 \in \reals} \indic{x_1 \in \braces{3,4,5}} \indic{x_2 \in \braces{3,4,5}}$.  \spc{1}
+
+
+
+
+
+
+\subquestionwithpoints{6} Let $X \sim \binomial{n}{p} := \binom{n}{x}p^x (1-p)^{n-x}$ where $n \in \naturals$ and $p \in (0, 1)$. In class we said that this PMF was valid $\forall x \in \reals$. If so, how did we define $\binom{n}{x}$ under the hood? 
+\vspace{-0.2cm}
+\beqn
+\binom{n}{x} := \quad\quad\quad\quad\quad\quad
+\eeqn
+
+
+%\subquestionwithpoints{7} Let $X_1 \sim \binomial{n}{p}$ and $X_2 \sim \negbin{r}{p}$. Find the $\support{X_1 - X_2}$.  \spc{3}
+
+
+
+
+\subquestionwithpoints{10} Let r.v.'s $X_1 ,X_2 \iid$ with expectation $\mu$ and variance $\sigsq$. Let $T = X_1 + X_2$ and $\Y = \bracks{X_1 ~X_2~ T}^\top$. Find $\var{\Y}$. Simplify to be as clean as possible. \spc{7}
+
+%\subquestionwithpoints{6} [MA] Let $X, Y \iid \geometric{p}$. Find $\prob{X \geq Y + c}$ where $c \in \naturals_0$, a constant. Your answer should be a function of $p, c$ and fundamental constants.  \spc{3}
+
+\subquestionwithpoints{6} [MA] Consider $X, Y \iid \geometric{p}$ and find $\prob{X \geq Y + c}$ as a function of $p$ and $c$ where $c \in \naturals_0$, a constant.  \spc{8}
+
+\subquestionwithpoints{6} [MA] Let $X \sim \bernoulli{\half}$ independent of $Y \sim \text{U}\parens{\braces{c, c + 2, c + 4, \ldots, c + 2m}}$ where $c \in \reals$ and $m \in \naturals_0$ are both constants. Find the PMF of $T = X + Y$ using a convolution formula. Is the final answer a brand name r.v. you know? If so, denote it using the notation we learned in class. \spc{6}
+
+\eenum
+
+
+\problem Consider the following bag of fruit with 5 apples, 6 bananas, 2 oranges and 1 grape cluster.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=2.2in]{fruit_bag.png}
+\end{figure}
+
+\noindent Let the vector r.v. $\X = [X_1, X_2, X_3, X_4]^\top$ represent a sample of 20 fruits uniformly at random \textit{with replacement} from a bag where $X_1$ denotes the number of apples sampled, $X_2$ denotes the number of bananas sampled, $X_3$ denotes the number of oranges sampled and $X_4$ denotes the number of grape clusters sampled. Assume this sampling procedure and this notation for all questions in this problem. 
+
+A \qu{format that can be computed without choose notation} would mean if $X \sim \binomial{11}{0.4}$ then you should write its PMF as $\frac{11!}{x!(11-x)!}0.4^x 0.6^{11-x}$ and $\prob{X = 2} = \frac{11!}{2!9!}0.4^2 0.6^{9}$.
+
+
+\benum
+
+\subquestionwithpoints{7} Find the JMF of $\X$ in a format that can be computed. Do not use choose notation. No brand name notation allowed in the final answer. Assume $\x \in \support{\X}$ so no need to ensure your answer is valid $\forall \x \in \reals^K$. Please write all parameter values explicitly. \spc{3}
+
+
+\subquestionwithpoints{7} What is the probability you draw 3 apples, 10 bananas, 5 oranges and 2 grape clusters? Do not compute explicitly but leave your answer in a format that a computer can do the calculation. Do not use choose notation. \spc{3}
+
+\subquestionwithpoints{5} What is the probability you draw 7 apples, 8 bananas, 3 oranges and 3 grape clusters? Do not compute explicitly but leave your answer in a format that a computer can do the calculation. Do not use choose notation. \spc{1}
+
+\subquestionwithpoints{5} What is the probability you draw 5 apples? Do not compute explicitly but leave your answer in a format that a computer can do the calculation. Do not use choose notation. \spc{1}
+
+\subquestionwithpoints{8} Knowing that you drew 5 apples, what is the probability you drew 3 bananas? Do not compute explicitly but leave your answer in a format that a computer can do the calculation without using choose notation. \spc{4}
+
+\subquestionwithpoints{5} You cannot sell apples and bananas, but you can sell each orange for \$0.50 and each grape cluster for \$2.00. Let $R$ be the r.v. the models sale revenue on the sample of 20 fruits from part (a). Compute $\expe{R}$ to the nearest cent. \spc{3}
+
+\subquestionwithpoints{7} Write an expression to compute $\var{R}$. Factor out constants but leave in terms of matrix and vector multiplication. Do not compute. \spc{8}
+
+\eenum
+
+
+\problem In soccer, each team scores a number of \qu{goals} and whoever has the most goals wins. We will consider modeling soccer game point spreads. This is the number of goals one time wins (or loses) by. We will be using the Skellam distribution:
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=2.5in]{soccer.jpg}
+%\end{figure}
+
+\beqn
+D \sim \text{Skellam}(\lambda_1, \lambda_2) := e^{-(\lambda_1 + \lambda_2)} \tothepow{\frac{\lambda_1}{\lambda_2}}{d / 2} I_{|d|}(2 \sqrt{\lambda_1\lambda_2}) \indic{d \in \integers}
+\eeqn
+
+\noindent where $I_c(a)$ denotes the modified Bessel function of the first kind. 
+
+\benum
+
+\subquestionwithpoints{6} Let $R = -D$ and prove that $R \sim \text{Skellam}(\lambda_2, \lambda_1)$. \spc{3}
+
+\href{https://www.statista.com/statistics/269031/goals-scored-per-game-at-the-fifa-world-cup-since-1930/}{The website linked here} compiled statistics on each soccer team for almost 90 years. Below are average number of goals for many countries' teams that won the world cup since 1950:
+
+This is not a class on statistics, so we will not talk about estimation. We will assume (a) the number of goals scored in any game is independent and Poisson-distributed and (b) the average number of goals above is exactly the $\lambda$ parameter in the Poisson distribution for each team.
+
+
+%\vspace{-1cm}
+\begin{figure}[h]
+\centering
+\includegraphics[width=4.5in]{goals_data.png}
+\end{figure}
+
+\subquestionwithpoints{5} If Brazil plays Argentina, who is expected to win and by how much?\spc{0.2}
+
+\subquestionwithpoints{6} Find an expression for the probability that Brazil beats Argentina by 2. You can leave your answer in terms of $I_c(a)$, the modified Bessel function of the first kind. Simplify to be as clean as possible.\spc{1.5}
+
+\subquestionwithpoints{5} [MA] The Skellam model actually has a small problem: you cannot tie in soccer (meaning both teams get the same score), so $d = 0$ \textit{should not be} in the support of our final modeling distribution. With this fact in mind, find an expression for the the probability that Brazil beats Argentina by 2. You can leave your answer in terms of $I_c(a)$, the modified Bessel function of the first kind. Simplify to be as clean as possible.\spc{2}
+
+
+
+
+\eenum
+
+
+\end{document}
+
+
+\subquestionwithpoints{7}  Assume independent r.v.'s $X$ and $Y$ where $\support{X} = (0, \infty)$ and $\support{Y} = (0, \infty)$. Beginning from the general definition of convolution, prove that
+
+\beqn
+f_{X + Y}(t) =  \int\displaylimits_0^t f_X(x) f_Y(t-x) dx
+\eeqn
+
+where by convention, the notation $f_X$ represents the PDF of r.v. $X$ which \emph{does not include} an indicator function.
+ \spc{8}
+
+\subquestionwithpoints{7}  If $X,Y \iid \exponential{\lambda}$, find $\prob{X \geq Y}$. \spc{10}
+
+\subquestionwithpoints{10}  If $X,Y \iid \exponential{\lambda}$, find the conditional density of $X$ given $X+Y$. There is no guarantee that the result will be the density of a brand name r.v., but if it is, denote it and find the parameter(s) as a function of $\lambda$. \spc{10}
+
+
+\subquestionwithpoints{7}  Let $X \sim \binomial{n_1}{p_1}$ independent of $Y \sim \binomial{n_2}{p_2}$. Find the PMF of $X+Y$ \textit{as best as you possibly can} (even if there is no closed form solution). \spc{10}
+
+\subquestionwithpoints{7}  Let $X \sim \binomial{2000}{0.004}$ independent of $Y \sim \binomial{20000}{0.0004}$. Approximate $\prob{X + Y = 0}$. The correct answer uses one simple operation and no credit will be given for answers that require the use of non-trivial computing. \spc{10}
+
+\subquestionwithpoints{5}  Let $X \sim \negbin{35}{0.37}$ independent of $Y \sim \geometric{0.37}$. Find the PMF of $X + Y$. \spc{10}
+
+\subquestionwithpoints{5} Calculate $\gamma(5,24.5) + \displaystyle\int\displaylimits_{24.5}^\infty t^4 e^{-t}dt$ as a number $\in \naturals$ explicitly. \spc{10}
+
+\eenum
+
+\problem Below are some questions about waiting times.
+
+
+\benum
+
+\subquestionwithpoints{5} The time until phone the next phone call is exponentially distributed with an average of half hour. If you have already waited half hour, find the probability you will wait more than another half hour. \spc{10}
+
+\subquestionwithpoints{5} The time until phone the next phone call is exponentially distributed with an average of half hour. What is the probability you get two phone calls in one hour? \spc{10}
+
+\subquestionwithpoints{7} The time until phone the next phone call is exponentially distributed with an average of half hour. What is the probability you get 10 phone calls before 5hr? You can answer using the CDF of a r.v. you define.\spc{10}
+
+\eenum
+
+\problem Below are some theoretical exercises about the vector-valued r.v.'s.
+
+
+\benum
+\subquestionwithpoints{6} Let $\Xoneton \iid \binomial{n}{p}$ and let $\X$ denote the vector of these r.v.'s. Find $\var{\X}$. \spc{10}
+
+\subquestionwithpoints{7} Let $\Xoneton \iid \binomial{n_0}{p}$ and let $\X$ denote the vector of these r.v.'s. Is $\X \sim \multinomial{m}{\p}$? If yes, find the values of its parameters, $m$ and $\p$ as functions of $n_0$ and $p$. If no, explain why not. \spc{10}
+
+\subquestionwithpoints{7} A person goes to the grocery store and buys $n$ fruits. For each of his $n$ selections, he picks rambutans with probability $p$ otherwise he picks dragonfruits. If rambutans cost $a$ and dragonfruits cost $b$, find his expected bill. \spc{4}
+
+\subquestionwithpoints{15} Find the standard deviation of his bill and simplify as best as possible.\spc{10}
+\eenum
+
+\end{document}
