@@ -7,12 +7,12 @@
 
 
 
-\title{MATH 368/621 Fall 2019 Homework \#3}
+\title{MATH 368/621 Fall 2019 Homework \#4 PARTIAL}
 
 \author{Professor Adam Kapelner} %STUDENTS: write your name here
 
 \iftoggle{professormode}{
-\date{Due under the door of KY604 11:59PM Friday, October 4, 2019 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+\date{Due under the door of KY604 11:59PM ??, October ??, 2019 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
 }
 
 \renewcommand{\abstractname}{Instructions and Philosophy}
@@ -46,138 +46,115 @@ The document is available with spaces for you to write your answers. If not usin
 
 
 
-\problem{These exercises will give you more practice with indicator functions.}
+\problem{These exercises will give you practice with the gamma function.}
 
 
 \begin{enumerate}
 
-\easysubproblem{Resolve as best as possible: $\sum_{x \in \integers} \indic{x \in \bracks{0, c}}$ where $c \in \naturals_0$.}\spc{1}
+\easysubproblem{Write the definition of $\Gamma\parens{x}$.}\spc{1}
 
-\easysubproblem{Resolve as best as possible: $\sum_{x \in \braces{0, 1, \ldots, d}} \indic{x \in \bracks{0, c}}$ where $c, d \in \naturals_0$.}\spc{1}
+\easysubproblem{Prove $\Gamma\parens{x + 1} = x \Gamma\parens{x}$.}\spc{3}
 
-
-\easysubproblem{Resolve as best as possible: $\int_{\reals} \indic{x \in \bracks{0, c}}\mathrm{d}x$ where $c \in \reals$.}\spc{1}
-
-\easysubproblem{Resolve as best as possible: $\int_{-\infty}^d \indic{x \in \bracks{0, c}}\mathrm{d}x$ where $c,d \in \reals$.}\spc{1}
-
-\easysubproblem{Resolve as best as possible: $\int_{d}^{d+1} \indic{x \in \bracks{0, c}}\mathrm{d}x$ where $c,d \in \reals$.}\spc{1}
-
-\intermediatesubproblem{Resolve as best as possible: $\int_{d}^{d+1} \indic{x \in \bracks{c, c + 1}}\mathrm{d}x$ where $c,d \in \reals$.}\spc{1}
-
-\end{enumerate}
-
-\problem{We will get some practice with the simple transformation $Y = g(X) = -X$ for discrete r.v.'s.}
+\easysubproblem{Write the definition of $\Gamma\parens{x,a}$ without using the gamma function.}\spc{2}
 
 
-\begin{enumerate}
-
-\easysubproblem{If $X \sim \bernoulli{p}$, find the PMF of $Y = -X$. Make sure the PMF is valid $\forall y \in \reals$.}\spc{1}
-
-\easysubproblem{If $X \sim \negbin{r}{p}$, find the PMF of $Y = -X$. Make sure the PMF is valid $\forall y \in \reals$.}\spc{1}
-
-\easysubproblem{If $X \sim \negbin{r}{p}$, find the PMF of $Y = -X$. Make sure the PMF is valid $\forall y \in \reals$.}\spc{1}
-
-\intermediatesubproblem{If $\X \sim \multinomial{n}{\p}$, find the JMF of $\Y = -\X$. Make sure the JMF is valid $\forall \y \in \reals^K$.}\spc{1}
-
-\end{enumerate}
-
-\problem{We will now practice the conditional-on-total distributions.}
-
-\begin{enumerate}
-
-\hardsubproblem{Let $X_1, X_2 \iid \geometric{p}$ and $T = X_1 + X_2$. Find the PMF of $X_1~|~T = t$ and notate it using a brand name random variance e.g. binomial, poisson, etc. The answer may surprise you. Conditional probability is very weird!}\spc{7}
+\easysubproblem{Write the definition of $Q\parens{x,a}$ without using the gamma function.}\spc{2}
 
 
-\intermediatesubproblem{[MA] Let $X_1, X_2 \iid \binomial{n}{p}$ and $T = X_1 + X_2$. Show that $X_1~|~T = t$ is hypergeometric. You can find information about this r.v. online. Note we did not / will not study the hypergeometric further and it will not be covered on any exams.}\spc{7}
-\end{enumerate}
+\intermediatesubproblem{Write the definition of $Q\parens{x,a}$ without using the gamma function.}\spc{2}
 
-\problem{We will now go over the Skellam distribution. In class we derived the PMF of $D = X_1 - X_2$ where $X_1, X_2 \iid \poisson{\lambda}$. This was first published in 1937. This was a special case of general Skellam distribution which is defined below:
+
+\intermediatesubproblem{If $0 < a < b < \infty$, find an expression for $\Gamma\parens{x, b} - \gamma\parens{x, a}$.}\spc{3}
+
+
+\easysubproblem{For $a,c \in (0, \infty)$, prove the following:
 
 \beqn
-D \sim \text{Skellam}(\lambda_1, \lambda_2) := e^{-(\lambda_1 + \lambda_2)} \tothepow{\frac{\lambda_1}{\lambda_2}}{d/2} I_{|d|}(2 \sqrt{\lambda_1\lambda_2})
-\eeqn
-
-\noindent where $I_x(a)$ denotes the \href{https://en.wikipedia.org/wiki/Bessel_function\#Modified_Bessel_functions}{modified Bessel function of the first kind} defined as:
-
-\beqn
-I_{\alpha}(\lambda) := \sum_{x = 0}^\infty \frac{\tothepow{\overtwo{\lambda}}{2x + \alpha}}{x! (x + \alpha)!}
-\eeqn
-
-\noindent when $\alpha \in \naturals_0$.
-}\vspace{0.5cm}
-
-\begin{enumerate}
-
-\easysubproblem{Show that for $\lambda_1 = \lambda_2$, we get the formula derived in class i.e. the special case of the Skellam derived in 1937.}\spc{1}
+\int_a^\infty t^{x-1} e^{-ct} dt = \frac{\Gamma\parens{x, ac}}{c^x}
+\eeqn}\spc{2}
 
 
-\intermediatesubproblem{[MA] If $D = X_1 - X_2$ where $X_1 \sim \poisson{\lambda_1}$ and $X_2 \sim \poisson{\lambda_2}$ where $X_1$ and $X_2$ are independent, show that $D \sim \text{Skellam}(\lambda_1, \lambda_2)$. You will be essentially redoing the proof published by John Gordon Skellam in 1946.}\spc{7}
-
-
-\easysubproblem{The Yankees play the Mets. Assume the number of runs scored is Poisson with rate parameter $\lambda_Y = 7$ for the Yankees and rate parameter $\lambda_M = 5$ for the Mets. Assume the number of runs scored by the Yankees is independent of the number of runs scored by the Mets. What score difference is expected in this baseball game?}\spc{2}
-
-\easysubproblem{Find the probability the Mets beat the Yankees by 3. Leave in notation. Do not compute an actual number.}\spc{2}
-
-\easysubproblem{[MA] Figure out a way to compute the probability in the previous question to two significant figures.}\spc{1}
-
-
-\easysubproblem{Write an expression to compute the probability the Mets beat the Yankees. Leave in notation. Do not compute an actual number.}\spc{1}
+\easysubproblem{Let $X \sim \gammadist{\alpha}{\beta}$. Show that this r.v. is equivalent to $X \sim \erlang{k}{\lambda}$ and find $k$ and $\lambda$ in terms of $\alpha$ and $\beta$. Are there any restrictions on the values of $\alpha$ and $\beta$ for this relationship to hold?}\spc{3}
 
 \end{enumerate}
 
-
-\problem{These exercises will introduce continuous convolutions. This problem and any further problems in this assignment are \emph{not covered on Midterm I}.}
+\problem{These exercises will give you practice with the Poisson process and the analogous Binomial-Negative Binomial relationship.}
 
 
 \begin{enumerate}
 
-\intermediatesubproblem{Explain when you would employ each of these five expressions for the convolution of PDF's for two continuous r.v.'s:
+\easysubproblem{Write the assumptions and the main result of the Poisson process (an equivalence of two probability statements and then an equivalence using the CDF's of the Erlang and the Poisson models).}\spc{3}
 
-\beqn
-f_{X+Y}(t) = f_X(x) * f_Y(x) &:=& \int\displaylimits_\reals f_{X,Y}(x, t-x) dx \\
-&=& \int\displaylimits_\reals f_X(x) f_Y(t-x) dx \\
-&=& \int\displaylimits_{\support{X}} f_X(x) f_Y(t-x) \indic{t-x \in \support{Y}}dx \\
-&=& \int\displaylimits_\reals f(x) f(t-x) dx \\
-&=& \int\displaylimits_{\support{X}} f(x) f(t-x) \indic{t-x \in \support{X}}dx
-\eeqn
+\easysubproblem{Write the assumptions and the main result of the Binomial-Negative Binomial relationships (an equivalence of two probability statements and then an equivalence using the CDF's of the Binomial and the Negative Binomial models).}\spc{3}
 
-\tiny{Note: it is possible the first one is not considered a \qu{convolution} by all disciplines but we are ignoring that.}\normalsize
-}~\spc{5}
+\easysubproblem{Assume $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5 < 1}$ using the two different ways (i.e. via the Poisson Process relationship).}\spc{2}
 
-\easysubproblem{If $X_1, X_2 \iid \uniform{0}{1}$, find $\support{T}$ where $T = X_1 + X_2$.}\spc{0}
 
-\intermediatesubproblem{Find $f_T(t)$ using the convolution.}\spc{3}~\vspace{1cm}
+\easysubproblem{Let $N \sim \poisson{\lambda}$. Describe a way to se the realizations from the r.v.'s $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$ to create a realization $n$ from the Poisson model.}\spc{2}
 
-\easysubproblem{If $X_1 \sim \uniform{a_1}{b_1}$ and $X_2 \sim \uniform{a_2}{b_2}$ independently, find $\support{T}$ where $T = X_1 + X_2$.}\spc{0}
+\hardsubproblem{Assume $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5  < m}$ where $m \in \naturals$ using two different ways (i.e. via the Poisson Process relationship).}\spc{2}
 
-\hardsubproblem{Find $f_T(t)$ using the convolution.}\spc{15}~\vspace{1cm}
+
+\intermediatesubproblem{Assume $X_1, X_2, X_3, \ldots \iid \geometric{p}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5  < 10}$ using two different ways (i.e. via the Binomial-Negative Binomial relationship).}\spc{2}
+
 
 
 \end{enumerate}
 
+\problem{These exercises will give you practice with transformations of discrete r.v.'s.}
 
-\problem{This question reviews the Exponential distribution and introduces the Erland distribution.}
 
 \begin{enumerate}
 
-\easysubproblem{Derive the Exponential from the Geometric r.v. as we did in class. Find its CDF, PMF and PDF. Make sure the CDF, PMF and PDF are valid $\forall x \in \reals$. Illustrate the PDF and CDF.}\spc{10}
+\easysubproblem{Let $X \sim \binomial{n}{p}$. Find the PMF of $Y = g(X) = \natlog{X + 1}$.}\spc{3}
+
+\intermediatesubproblem{Let $X \sim \binomial{n}{p}$. Find the PMF of $Y = g(X) = X^2$. Is $g(X)$ monotonic? Does that matter for this r.v.?}\spc{3}
+
+\hardsubproblem{Let $X \sim \binomial{n}{p}$ where $n$ is an even number. Find the PMF of $Y = g(X) = \text{mod}(X, 2)$ where \qu{mod} denotes modulus division of the first argument by the second argument.}\spc{3}
+
+\hardsubproblem{[MA] Let $X \sim \negbin{k}{p}$. Find the PMF of $Y = g(X) = \text{mod}(X, n)$ where $n \in \naturals$.}\spc{3}
+\end{enumerate}
+
+\problem{These exercises will give you practice with transformations of continuous r.v.'s and the quantile function.}
+
+\begin{enumerate}
+
+\intermediatesubproblem{Let $X \sim \stduniform$. Find the PDF of $Y = g(X) = aX + c$. Make sure you're careful with the indicator function that specifies the support. There are two cases.}\spc{3}
+
+\intermediatesubproblem{Let $X \sim \exponential{\lambda}$. Find the PDF of $Y = g(X) = \natlog{X}$.}\spc{3}
+
+\hardsubproblem{[MA] Let $X \sim \exponential{\lambda}$. Find the PDF of $Y = g(X) = \sin{X}$.}\spc{3}
+
+\intermediatesubproblem{Let $X \sim \exponential{1}$. Find the PDF of $Y = g(X) = -\natlog{\frac{e^{-X}}{1 - e^{-X}}}$. If this is a brand name r.v., mark it so and include its parameter values.}\spc{5}
 
 
-\easysubproblem{Let $X_1, \ldots, X_k \iid \exponential{\lambda}$. Show that the sum $T = X_1 + \ldots + X_k \sim \erlang{k}{\lambda}$ by finding its PDF.}\spc{10}
+\easysubproblem{Find the Quantile function of $X$ where $X \sim \text{Logistic}(0, 1)$.}\spc{3}
 
+\easysubproblem{Find the PDF of $Y = \sigma X + \mu \sim \text{Logistic}(\mu, \sigma)$ where $X \sim \text{Logistic}(0, 1)$.}\spc{3}
 
+\hardsubproblem{Let $X \sim \text{Logistic}(0,1)$. Find the PDF of $Y = g(X) = \oneover{1 + e^{-X}}$. If this is a brand name r.v., mark it so and include its parameter values.}\spc{5}
 
-\easysubproblem{Find the expectation of $T \sim \erlang{k}{\lambda}$. Use the linearity rules!}\spc{1}
+\easysubproblem{Let $X \sim \exponential{\lambda}$. Find the PDF of $Y = g(X) = ke^X$. Marked easy because it is in the notes. This will be a brand name r.v., so mark it so and include its parameter values.}\spc{3}
 
-\easysubproblem{Find the variance of $T \sim \erlang{k}{\lambda}$. Use the linearity rules!}\spc{3}
+\easysubproblem{Rederive the $X \sim \text{Laplace}(0, 1)$ r.v. model by taking the difference of two standard exponential r.v.'s.}\spc{3}
 
-\easysubproblem{Why is the geometric distribution analogous to the exponential distribution? Why is the negative binomial distribution analogous to the erlang distribution?}\spc{3}
+\easysubproblem{Let $X \sim \text{Laplace}(0, 1)$. Prove that $\expe{X} = 0$ without using the integral definition. There's a trick.}\spc{3}
 
-\easysubproblem{If the length of time (in minutes) of a phone call is distributed $\exponential{0.5}$ and all phone call lengths are $\iid$, find an expression for the probability that the total sum time of 37 phone calls lasts longer than 17 minutes.}\spc{2}
+\easysubproblem{Find the PDF of $Y = \sigma X + \mu \sim \text{Laplace}(\mu, \sigma)$ where $X \sim \text{Laplace}(0, 1)$.}\spc{3}
 
+\intermediatesubproblem{[MA] Find the Quantile function of $X$ where $X \sim \text{Laplace}(0, 1)$.}\spc{3}
 
-\intermediatesubproblem{Show that for any exponential r.v. with rate parameter $\lambda$ the distribution is \qu{memoryless} meaning that for any $c$, a positive constant, $\cprob{X > x + c}{X > c} = \prob{X > x}$.}\spc{3}
+\intermediatesubproblem{[MA] Prove that $X \sim \text{ParetoI}(1, log_4(5))$ models the \qu{Pareto Principle}.}\spc{10}
 
+\intermediatesubproblem{Is $X \sim \text{ParetoI}(1, log_4(5))$ a good model for land ownership amount for individuals? Why / why not?}\spc{4}
+
+\hardsubproblem{[MA] Let $X \sim \text{ParetoI}(k, \lambda)$. Show that $Y = X~|~X > c$ where $c > k$ is also a ParetoI r.v. and find its parameter values.}\spc{5}
+
+\extracreditsubproblem{[MA] Prove or disprove that considering any ParetoI conditional on being larger than a certain value would also be a power rule where the top $q$ proportion of the unit modeled is in the hands of the top $\bar{q} := 1 - q$ values of the unit. 
+
+This is the whole idea of a power law e.g. if the top 1\% of the country owns 99\% of the wealth then the power law also implies that of the top 1\% of the top 1\% of them owns 99\% of that 99\% and etc.
+
+I couldn't seem to get it in one hour of trying so it is likely hard to show this. Or maybe it's incorrect. You get EC if you make a good effort.}\spc{5}
 \end{enumerate}
 
 \end{document}
