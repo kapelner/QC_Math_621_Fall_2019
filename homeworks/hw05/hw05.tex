@@ -7,12 +7,12 @@
 
 
 
-\title{MATH 368/621 Fall 2019 Homework \#4}
+\title{MATH 368/621 Fall 2019 Homework \#5 PARTIAL}
 
 \author{Professor Adam Kapelner} %STUDENTS: write your name here
 
 \iftoggle{professormode}{
-\date{Due under the door of KY604 11:59PM Friday, November 1, 2019 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+\date{Due under the door of KY604 11:59PM Friday, November 15, 2019 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
 }
 
 \renewcommand{\abstractname}{Instructions and Philosophy}
@@ -24,7 +24,7 @@
 \begin{abstract}
 The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
 
-Reading is still \textit{required}. For this homework set, review from math 241 about conditional probability, expectation and variance then read on your own about the multinomial distribution, conditional vector expectation, covariances, variance-covariance matrices.
+Reading is still \textit{required}. For this homework set, read on your own about the Weibull, Frechet, generalized extreme value distributions, order statistics, transformations, the beta distribution.
 
 The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
 
@@ -42,6 +42,30 @@ The document is available with spaces for you to write your answers. If not usin
 \clearpage
 }
 
+
+\problem{These exercises will give you practice with the Weibull distribution.}
+
+\begin{enumerate}
+
+\easysubproblem{If $X \sim \exponential{1}$ then show that $Y = \oneover{\lambda} X^{\oneover{k}} \sim \text{Weibull}\parens{k,\lambda}$ where $k, \lambda > 0$.}\spc{2}
+
+\intermediatesubproblem{Find $\text{Med}\bracks{Y}$.}\spc{3}
+
+\easysubproblem{The parameter $k$ is called the \qu{Weibull modulus} and it is very important in modeling. The three classes of Weibull models are when $k < 1, k = 1, k > 1$. Write a probability statement about each of these cases. Give one example of what each of these cases can potentially model in the real world.}\spc{5}
+
+\hardsubproblem{[MA] Prove that if $k > 1$ then $\cprob{Y \geq y + c}{Y \geq c} < \prob{Y \geq y}$ for $c > 0$.}\spc{6}
+
+\hardsubproblem{If $X \sim \exponential{\lambda}$ then show that $Y = X^\beta \sim \text{Weibull}$ where $\beta > 0$. Find the resulting Weibull's parameters in terms of the parameterization we learned in class (i.e. your answer in part a).}\spc{2}
+
+\easysubproblem{Using $Y$, the Weibull in terms of the parameterization we learned in class (i.e. your answer in part a), find the PDF of $W = Y + c \sim \text{Weibull}\parens{k, \lambda, c}$ which is known as the \qu{translated Weibull} or \qu{3-parameter Weibull model}.}\spc{5}
+
+\easysubproblem{Using $Y$, the Weibull in terms of the parameterization we learned in class (i.e. your answer in part a), find the PDF of $V = \oneover{Y} \sim \text{Frechet}\parens{k, \lambda}$., the location-zero Frechet distribution.}\spc{5}
+
+\intermediatesubproblem{Find the CDF of the location-zero Frechet distribution.}\spc{3}
+
+\end{enumerate}
+
+\end{document}
 
 
 
