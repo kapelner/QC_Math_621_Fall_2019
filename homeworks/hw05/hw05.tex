@@ -59,140 +59,191 @@ The document is available with spaces for you to write your answers. If not usin
 
 \easysubproblem{Using $Y$, the Weibull in terms of the parameterization we learned in class (i.e. your answer in part a), find the PDF of $W = Y + c \sim \text{Weibull}\parens{k, \lambda, c}$ which is known as the \qu{translated Weibull} or \qu{3-parameter Weibull model}.}\spc{5}
 
-\easysubproblem{Using $Y$, the Weibull in terms of the parameterization we learned in class (i.e. your answer in part a), find the PDF of $V = \oneover{Y} \sim \text{Frechet}\parens{k, \lambda}$., the location-zero Frechet distribution.}\spc{5}
 
-\intermediatesubproblem{Find the CDF of the location-zero Frechet distribution.}\spc{3}
-
-\end{enumerate}
-
-\end{document}
+\easysubproblem{Find the PDF of $R = -W$ which is known as the \qu{reverse Weibull}.}\spc{5}
 
 
+\intermediatesubproblem{Using $Y$, the Weibull in terms of the parameterization we learned in class (i.e. your answer in part a), find the PDF of $V = \oneover{Y} \sim \text{Frechet}\parens{k, \lambda}$, the location-zero Frechet distribution.}\spc{5}
 
 
-\problem{These exercises will give you practice with the gamma function.}
+%\intermediatesubproblem{Find the CDF of $V$, the location-zero Frechet distribution.}\spc{3}
 
+\intermediatesubproblem{Find the PDF of $F = V + m \sim \text{Frechet}\parens{k, \lambda, m}$, the Frechet distribution.}\spc{5}
 
-\begin{enumerate}
+\easysubproblem{Let $G \sim \text{Gumbel}(\mu, \beta)$. Write the PDF of $G$, the general Gumbel distribution. Copy it from HW4 problem 5(c) or from Wikipedia.}\spc{4}
 
-\easysubproblem{Write the definition of $\Gamma\parens{x}$.}\spc{2}
-
-\easysubproblem{Prove $\Gamma\parens{x + 1} = x \Gamma\parens{x}$.}\spc{5}
-
-\easysubproblem{Write the definition of $\Gamma\parens{x,a}$ without using the gamma function.}\spc{2}
-
-
-\intermediatesubproblem{Write the definition of $Q\parens{x,a}$ without using the gamma function.}\spc{3}
-
-
-\intermediatesubproblem{If $0 < a < b < \infty$, find an expression for $\Gamma\parens{x, b} - \gamma\parens{x, a}$.}\spc{3}
-
-
-\easysubproblem{For $a,c \in (0, \infty)$, prove the following:
+\extracreditsubproblem{It turns out that $R, F, G$ (i.e., the reverse Weibull, the Frechet and the Gumbel) are related. This is a result known as the \textit{extreme value theorem} which hopefully we will get to in class. They are lumped together into one distribution called the \textit{generalized extreme value} (GEV) distribution,
 
 \beqn
-\int_a^\infty t^{x-1} e^{-ct} dt = \frac{\Gamma\parens{x, ac}}{c^x}
-\eeqn}\spc{6}
+E \sim GEV(\mu, \sigma, \xi) \quad \text{where} \quad F_E(e) = \begin{cases}
+e^{-\tothepow{1 + \xi \frac{e - \mu}{\sigma}}{- \oneover{\xi}}} ~~\text{if}~~ \xi \neq 0\\
+e^{-e^{-\frac{e - \mu}{\sigma}}} ~~\text{if}~~ \xi = 0\\
+\end{cases}
+\eeqn
 
+Find $\mu, \sigma, \xi$ that correspond to the r.v.'s $R, F, G$. Thus was discovered by Daniel McFadden in 1978, the Nobel laureate in Economics in 2000.
+}\spc{6}
 
-\easysubproblem{Let $X \sim \gammadist{\alpha}{\beta}$. Show that this r.v. is equivalent to $X \sim \erlang{k}{\lambda}$ and find $k$ and $\lambda$ in terms of $\alpha$ and $\beta$. Are there any restrictions on the values of $\alpha$ and $\beta$ for this relationship to hold?}\spc{3}
 
 \end{enumerate}
 
-\problem{These exercises will give you practice with the Poisson process and the analogous Binomial-Negative Binomial relationship.}
+
+\problem{We will practice finding kernels and relating them to known distributions. The gamma function and the beta function will come up as well.}
+
+\begin{enumerate}
+
+\easysubproblem{Find the kernel of the negative binomial PMF.}\spc{3}
+
+\easysubproblem{Find the kernel of the beta PDF.}\spc{3}
+
+\easysubproblem{Find the kernel of the beta binomial PMF.}\spc{3}
+
+\easysubproblem{If $k(x) = e^{\lambda x} x^{k-1} \indic{x > 0}$ how would you know if the r.v. $X$ was an $\erlang{k}{\lambda}$ or a $\gammadist{k}{\lambda}$?}\spc{4}
+
+
+\intermediatesubproblem{If $k(x) = xe^{-x^2} \indic{x > 0}$, how is $X$ distributed?}\spc{4}
+
+
+\hardsubproblem{If the kernel without the indicator function is $x^{-d}$ where $d>1$, how is $X$ distributed?}\spc{5}
+
+
+\hardsubproblem{Prove $B(\alpha, \beta) = \frac{\Gammaf{\alpha}\Gammaf{\beta}}{\Gammaf{\alpha+\beta}}$ using the method from class (i.e. the textbook) is not required.}\spc{9}
+
+
+\end{enumerate}
+
+\problem{We will now practice using order statistics concepts.}
+
 
 
 \begin{enumerate}
 
-\easysubproblem{Write the assumptions and the main result of the Poisson process (an equivalence of two probability statements and then an equivalence using the CDF's of the Erlang and the Poisson models).}\spc{3}
+\easysubproblem{If $\Xoneton \iid f(x)$ where its CDF is denoted $F(x)$, express the CDF of the maximum $X_i$ and express the CDF of the minimum $X_i$.}\spc{2}
 
-\easysubproblem{Write the assumptions and the main result of the Binomial-Negative Binomial relationships (an equivalence of two probability statements and then an equivalence using the CDF's of the Binomial and the Negative Binomial models).}\spc{3}
-
-\easysubproblem{Assume $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5 < 1}$ using the two different ways (i.e. via the Poisson Process relationship).}\spc{2}
+\easysubproblem{If $\Xoneton \iid f(x)$ where its CDF is denoted $F(x)$, express the PDF of the maximum $X_i$ and express the PDF of the minimum $X_i$.}\spc{2}
 
 
-\easysubproblem{Let $N \sim \poisson{\lambda}$. Describe a way to se the realizations from the r.v.'s $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$ to create a realization $n$ from the Poisson model.}\spc{2}
+\easysubproblem{If $\Xoneton \iid f(x)$ where its CDF is denoted $F(x)$, express the PDF and the CDF of $X_{(k)}$ i.e. the $k$th smallest $X_i$.}\spc{5}
 
-\hardsubproblem{Assume $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5  < m}$ where $m \in \naturals$ using two different ways (i.e. via the Poisson Process relationship).}\spc{2}
+\hardsubproblem{[MA] If discrete $\Xoneton \iid p(x)$, why would the formulas in (a-c) not be accurate?}\spc{3}
 
 
-\intermediatesubproblem{Assume $X_1, X_2, X_3, \ldots \iid \geometric{p}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5  < 10}$ using two different ways (i.e. via the Binomial-Negative Binomial relationship).}\spc{2}
+%\intermediatesubproblem{If $\Xoneton \iid \exponential{\lambda}$, find the PDF and CDF of the maximum.}\spc{4}
+%
+%\intermediatesubproblem{If $\Xoneton \iid \exponential{\lambda}$, find the PDF and CDF of the minimum.}\spc{4}
 
+\intermediatesubproblem{If $\Xoneton \iid \stduniform$, show that $X_{(k)} \sim \betanot{k}{n-k+1}$.}\spc{6}
+
+\intermediatesubproblem{Express $\binom{n}{k}$ in terms of the beta function.}\spc{5}
+
+
+\extracreditsubproblem{If $\Xoneton \iid \uniform{a}{b}$, show that $X_{(k)}$ is a linear transformation of the beta distribution and find its parameters.}\spc{8}
+
+\intermediatesubproblem{[MA] Show that $I_x(\alpha, \beta + 1) = I_x(\alpha, \beta) + \frac{x^\alpha (1 - x)^\beta}{\beta B(\alpha, \beta)}$.}\spc{5}
+
+\hardsubproblem{[MA] If $X \sim \binomial{n}{p}$, show that $F(x) = I_{1-p}(n-k, k+1)$}\spc{15}
 
 
 \end{enumerate}
+%
+%\problem{We will practice truncations of r.v.'s.}
+%\begin{enumerate}
+%
+%
+%\easysubproblem{Given r.v. $X$, restate the formulas for the PDF of $X$ for (i) the arbitrary truncation to the set $X \in A$, (ii) the truncation for $X \geq x_0$ and (iii) the truncation for $X \leq x_0$.}\spc{4}
+%
+%\intermediatesubproblem{If $T \sim \text{Weibull}\parens{k, \lambda}$ and it is known that $T \leq 120$ years, find the PDF of the truncated $T$.}\spc{2}
+%
+%
+%\intermediatesubproblem{Using the notation from 2(i), find the PMF of $X \sim \binomial{n}{p}$ where it is known that $X > n_0$.}\spc{2}
+%
+%\end{enumerate}
 
-\problem{These exercises will give you practice with transformations of discrete r.v.'s.}
 
+\problem{We will now practice multivariate change of variables where $\Y = \bv{g}(\X)$ where $\X$ denotes a vector of $k$ continuous r.v.'s and $\bv{g} : \reals^k \rightarrow \reals^k$ and is 1:1.}
 
 \begin{enumerate}
 
-\easysubproblem{Let $X \sim \binomial{n}{p}$. Find the PMF of $Y = g(X) = \natlog{X + 1}$.}\spc{3}
+\easysubproblem{State the formula for the PDF of $\Y$.}\spc{4}
 
-\intermediatesubproblem{Let $X \sim \binomial{n}{p}$. Find the PMF of $Y = g(X) = X^2$. Is $g(X)$ monotonic? Does that matter for this r.v.?}\spc{3}
 
-\hardsubproblem{Let $X \sim \binomial{n}{p}$ where $n$ is an even number. Find the PMF of $Y = g(X) = \text{mod}(X, 2)$ where \qu{mod} denotes modulus division of the first argument by the second argument.}\spc{3}
+\intermediatesubproblem{Demonstrate that the formula for the PDF of $\Y$ reduces to the univariate change of variables formula if the dimensions of $\Y$ and $\X$ are 1. }\spc{4}
 
-\hardsubproblem{[MA] Let $X \sim \negbin{k}{p}$. Find the PMF of $Y = g(X) = \text{mod}(X, n)$ where $n \in \naturals$.}\spc{3}
+
+\easysubproblem{State the formula for the PDF of $R = \frac{X_1}{X_2}$.}\spc{1}
+
+\easysubproblem{State the formula for the PDF of $R = \frac{X_1}{X_2}$ if $X_1$ and $X_2$ are independent.}\spc{1}
+
+\easysubproblem{State the formula for the PDF of $R = \frac{X_1}{X_2}$ if $X_1$ and $X_2$ are independent and have positive supports.}\spc{2}
+
+
+\easysubproblem{State the formula for the PDF of $R = \frac{X_1}{X_1 + X_2}$.}\spc{1}
+
+\easysubproblem{State the formula for the PDF of $R = \frac{X_1}{X_1 + X_2}$ if $X_1$ and $X_2$ are independent.}\spc{1}
+
+\intermediatesubproblem{State the formula for the PDF of $R = \frac{X_1}{X_1 + X_2}$ if $X_1$ and $X_2$ are independent and have positive supports. This should be a simpler expression than the previous.}\spc{2}
+
+\hardsubproblem{Find a formula for the PDF of $E = X_1^{X_2}$ where $X_1, X_2 \iid f(x)$.}\spc{10}
+
+\hardsubproblem{Show that $R = \frac{X_1}{X_2} \sim \beta'(\alpha, \beta)$, the beta prime distribution, if $X_1 \sim \gammadist{\alpha}{1}$ independent of $X_2 \sim \gammadist{\beta}{1}$.}\spc{12}
+
 \end{enumerate}
 
-\problem{These exercises will give you practice with transformations of continuous r.v.'s and the quantile function.}
+
+\problem{We will now practice multilevel models, mixture distributions and compound distributions.}
 
 \begin{enumerate}
 
-\intermediatesubproblem{Let $X \sim \stduniform$. Find the PDF of $Y = g(X) = aX + c$. Make sure you're careful with the indicator function that specifies the support. There are two cases.}\spc{3}
+\easysubproblem{According to the \href{http://www.pewforum.org/2015/05/12/chapter-3-demographic-profiles-of-religious-groups/}{Pew Research Center's demographic survey of Americans}, \qu{religious} people have more children than \qu{non-religious} people. As an example, Mormons have on average 3.4 children and Atheists have on average 1.6 children. Model both groups' number of children as Poissons.}\spc{2}
 
-\intermediatesubproblem{Let $X \sim \exponential{\lambda}$. Find the PDF of $Y = g(X) = \natlog{X}$.}\spc{3}
+\hardsubproblem{[MA] Comment on the appropriateness of the Poisson model here.}\spc{1}
 
-\hardsubproblem{[MA] Let $X \sim \exponential{\lambda}$. Find the PDF of $Y = g(X) = \sin{X}$.}\spc{3}
+\easysubproblem{If we are to only consider atheists and Mormons, there are about 10M atheists in the American population and about 7M Mormons in the American population. Create a r.v. $X$ which is 1 if Mormon and 0 if atheist.}\spc{1}
 
-\intermediatesubproblem{Let $X \sim \exponential{1}$. Find the PDF of $Y = g(X) = -\natlog{\frac{e^{-X}}{1 - e^{-X}}}$. If this is a brand name r.v., mark it so and include its parameter values.}\spc{5}
+\intermediatesubproblem{If you call $Y$ the number of children someone has, find the distribution of $Y$ where atheist/Mormon status is unknown. Draw a tree of this model. }\spc{7}
+
+\easysubproblem{Can $Y$ be called a compound distribution? Y/N}\spc{0}
 
 
-\easysubproblem{Find the Quantile function of $X$ where $X \sim \text{Logistic}(0, 1)$.}\spc{3}
+\hardsubproblem{If somone has 5 kids, what is the probability they are Mormon according to our model?}\spc{6}
 
-\easysubproblem{Find the PDF of $Y = \sigma X + \mu \sim \text{Logistic}(\mu, \sigma)$ where $X \sim \text{Logistic}(0, 1)$.}\spc{3}
+\easysubproblem{Show that if $Y~|X=x \sim \poisson{x}$ and $X \sim \text{Gamma}(\alpha, \beta)$ then $Y \sim \text{ExtNegBinomial}\parens{\alpha, \frac{\beta}{1 + \beta}}$. Draw a tree of this model too. Marked easy because we did this in class but we left out one step. Hint: find the kernel of the $\text{ExtNegBinomial}\parens{\alpha, \frac{\beta}{1 + \beta}}$ distribution.}\spc{13}
 
-\hardsubproblem{Let $X \sim \text{Logistic}(0,1)$. Find the PDF of $Y = g(X) = \oneover{1 + e^{-X}}$. If this is a brand name r.v., mark it so and include its parameter values.}\spc{5}
+\hardsubproblem{Show that if $Y~|X=x \sim \exponential{x}$ and $X \sim \text{Gamma}(\alpha, \beta)$ then $Y \sim \text{Lomax}(\beta, \alpha)$. You will need to look up the Lomax distribution on wikipedia. Draw a tree of this model too.}\spc{10}
 
-\easysubproblem{Let $X \sim \exponential{\lambda}$. Find the PDF of $Y = g(X) = ke^X$. Marked easy because it is in the notes. This will be a brand name r.v., so mark it so and include its parameter values.}\spc{3}
+\hardsubproblem{[MA] Find the PDF of the compound distribution $Y$ if $Y~|~X_1=x_1,~X_2=x_2 \sim \betanot{x_1}{x_2}$ where $X_1 \sim \gammadist{\alpha_1}{\beta_1}$ independent of $X_2 \sim \gammadist{\alpha_2}{\beta_2}$. Draw a tree of this model. Get as far as you can.}\spc{6}
 
-\easysubproblem{Rederive the $X \sim \text{Laplace}(0, 1)$ r.v. model by taking the difference of two standard exponential r.v.'s.}\spc{3}
+%
+%\easysubproblem{Can this be considered an \qu{overdispersed} beta? Yes/no.}\spc{0}
+%
+%
+%\easysubproblem{Why does mixing / compounding give more \qu{degrees of freedom} to the model of the phenomenom you care about (denoted $Y$ in class and above). Discuss what this means and how it may be useful in the real world.}\spc{10}
 
-\easysubproblem{Let $X \sim \text{Laplace}(0, 1)$. Prove that $\expe{X} = 0$ without using the integral definition. There's a trick.}\spc{3}
-
-\easysubproblem{Find the PDF of $Y = \sigma X + \mu \sim \text{Laplace}(\mu, \sigma)$ where $X \sim \text{Laplace}(0, 1)$.}\spc{3}
-
-\intermediatesubproblem{[MA] Find the Quantile function of $X$ where $X \sim \text{Laplace}(0, 1)$.}\spc{3}
-
-\intermediatesubproblem{[MA] Prove that $X \sim \text{ParetoI}(1, log_4(5))$ models the \qu{Pareto Principle}.}\spc{10}
-
-\intermediatesubproblem{Is $X \sim \text{ParetoI}(1, log_4(5))$ a good model for land ownership amount for individuals? Why / why not?}\spc{4}
-
-\hardsubproblem{[MA] Let $X \sim \text{ParetoI}(k, \lambda)$. Show that $Y = X~|~X > c$ where $c > k$ is also a ParetoI r.v. and find its parameter values.}\spc{5}
-
-\extracreditsubproblem{[MA] Prove or disprove that considering any ParetoI conditional on being larger than a certain value would also be a power rule where the top $q$ proportion of the unit modeled is in the hands of the top $\bar{q} := 1 - q$ values of the unit. 
-
-This is the whole idea of a power law e.g. if the top 1\% of the country owns 99\% of the wealth then the power law also implies that of the top 1\% of the top 1\% of them owns 99\% of that 99\% and etc.
-
-I couldn't seem to get it in one hour of trying so it is likely hard to show this. Or maybe it's incorrect. You get EC if you make a good effort.}\spc{5}
 
 \end{enumerate}
 
-\problem{We will now explore a couple of extreme distributions.}
+
+\problem{Moment generating functions (mgf's) and characteristic Functions (ch.f.'s)!}
 
 \begin{enumerate}
 
-\intermediatesubproblem{[MA] Let $X \sim \exponential{1}$ and $Y = -\natlog{X} \sim \text{Gumbel}(0,1)$. Find the PDF of this standard Gumbel distribution. Make sure you include the indicator function in the functional form to make it valid $\forall~ y \in \reals$ (if necessary).}\spc{6}
+\intermediatesubproblem{Find a piecewise function that can compute $i^n$ where $i :=\sqrt{-1}$ and $n \in \naturals$. Hint: use the \qu{mod} function (modulus division) to express the cases.}\spc{3}
 
-\easysubproblem{Find the CDF of $Y$.}\spc{4}
+\intermediatesubproblem{Prove that $\abss{e^{i \theta}} = 1$ for all $\theta$.}\spc{3}
 
-\easysubproblem{Let $G = \beta Y + \mu \sim \text{Gumbel}(\mu, \beta)$. Find the PDF of $G$, the general Gumbel distribution.}\spc{4}
+\easysubproblem{Give one example function $f$ where you show conclusively that $f \notin L^1$.}\spc{3}
 
-\easysubproblem{[MA] Show that for any r.v. $X$, if $Y = aX + b$, then $F_Y(y) = F_X\parens{\frac{y - b}{a}}$.}\spc{2}
+\intermediatesubproblem{Prove that all PDF's are $\in L^1$.}\spc{3}
 
-\easysubproblem{Using the answer in the previous question, find the CDF of $G \sim \text{Gumbel}(\mu, \beta)$.}\spc{4}
+\intermediatesubproblem{Given the Fourier inversion theorem, prove that if $\phi_X(t) \in L^1$ then 
+\beqn
+f_X(x) = \oneover{2\pi} \int_\reals e^{itx} \phi_X(t) dt.
+\eeqn
+
+Hint: use the Fourier inversion theorem and make a $u$ substitution.}\spc{3}
 
 \end{enumerate}
+
 
 \end{document}
+
