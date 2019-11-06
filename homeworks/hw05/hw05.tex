@@ -7,12 +7,12 @@
 
 
 
-\title{MATH 368/621 Fall 2019 Homework \#5 PARTIAL}
+\title{MATH 368/621 Fall 2019 Homework \#5}
 
 \author{Professor Adam Kapelner} %STUDENTS: write your name here
 
 \iftoggle{professormode}{
-\date{Due under the door of KY604 11:59PM Friday, November 15, 2019 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+\date{Due under the door of KY604 11:59PM Monday, November 18, 2019 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
 }
 
 \renewcommand{\abstractname}{Instructions and Philosophy}
@@ -24,7 +24,7 @@
 \begin{abstract}
 The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
 
-Reading is still \textit{required}. For this homework set, read on your own about the Weibull, Frechet, generalized extreme value distributions, order statistics, transformations, the beta distribution.
+Reading is still \textit{required}. For this homework set, read on your own about the Weibull, Frechet, generalized extreme value distributions, order statistics, order statistics, the beta distribution, general transformations of multiple r.v.'s, mixture models, conditional densities, characteristics functions.
 
 The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
 
@@ -226,7 +226,7 @@ Find $\mu, \sigma, \xi$ that correspond to the r.v.'s $R, F, G$. Thus was discov
 \end{enumerate}
 
 
-\problem{Moment generating functions (mgf's) and characteristic Functions (ch.f.'s)!}
+\problem{Moment generating functions (mgf's) and characteristic functions (ch.f.'s)!}
 
 \begin{enumerate}
 
@@ -236,14 +236,27 @@ Find $\mu, \sigma, \xi$ that correspond to the r.v.'s $R, F, G$. Thus was discov
 
 \easysubproblem{Give one example function $f$ where you show conclusively that $f \notin L^1$.}\spc{3}
 
-\intermediatesubproblem{Prove that all PDF's are $\in L^1$.}\spc{3}
+\easysubproblem{Prove that all PDF's are $\in L^1$.}\spc{3}
 
 \intermediatesubproblem{Given the Fourier inversion theorem, prove that if $\phi_X(t) \in L^1$ then 
+
 \beqn
 f_X(x) = \oneover{2\pi} \int_\reals e^{itx} \phi_X(t) dt.
 \eeqn
 
-Hint: use the Fourier inversion theorem and make a $u$ substitution.}\spc{3}
+Hint: use the definition of the inverse Fourier transform and make a $u$ substitution.}\spc{3}
+
+\easysubproblem{Find the ch.f. of $X \sim \bernoulli{p}$.}\spc{3}
+
+\intermediatesubproblem{Find the ch.f. of $T \sim \binomial{n}{p}$. Hint: use the binomial theorem.}\spc{3}
+
+\easysubproblem{Using ch.f.'s, find $\expe{T}$.}\spc{3}
+
+\intermediatesubproblem{Using ch.f.'s, find $\var{T}$.}\spc{3}
+
+\intermediatesubproblem{Using ch.f.'s, show that if $\Xoneton \iid \bernoulli{p}$, then $T = X_1 + \ldots + X_n \sim \binomial{n}{p}$.}\spc{3}
+
+\easysubproblem{Define the mgf and prove properties 0, 1, 2, 3 and 4 for mgf's.}\spc{3}
 
 \end{enumerate}
 
