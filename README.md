@@ -4,7 +4,10 @@ This is the course homepage for Math 368 / 621 for the Fall semester 2017 at Que
 
 ## Schedule Announcement
 
-Due to the Jewish holidays, I must miss one lecture day: Monday, October 21 which will be made up in the following way. I will use the lecture period before Midterm II, November 11, as a full lecture and reschedule the review session to either the Friday before (November 8) or the Tuesday before Midterm II, November 12. The class will vote democractically on the day/time and the results will be posted here.
+We will have two review sessions for the midterm:
+
+* Friday, Nov 8 from 10-11:30AM in KY 242
+* Tuesday, Nov 12 from 12-1:30PM in RA 202
 
 ## Lectures
 
