@@ -80,16 +80,78 @@ The document is available with spaces for you to write your answers. If not usin
 
 \begin{enumerate}
 
-\easysubproblem{Write the assumptions and the main result of the Poisson process (an equivalence of two probability statements and then an equivalence using the CDF's of the Erlang and the Poisson models).}\spc{3}
+\easysubproblem{Write the assumptions and the main result of the Poisson process (an equivalence of two probability statements and then an equivalence using the CDF's of the Erlang and the Poisson models).}
+
+Let
+
+\beqn
+T_k &\sim& \erlang{k}{\lambda} \\
+N &\sim& \poisson{\lambda} \\
+\eeqn
+
+The probability statements that are the same are:
+
+\beqn
+\prob{T_k > 1} = \prob{N \leq k -1} = \prob{N < K}
+\eeqn
+
+The interpretation of the l.h.s is if you are waiting for $k$ $\iid \exponential{\lambda}$ events to occur / happen / realize in sequence then the probability of waiting for more than 1 second means that $k-1$ or less events happened before 1 second. Due to the equivalence, the Poisson r.v. $N$ models the number of events that happen in less than 1 second. You can write this in CDF's as:
+
+\beqn
+1 - F_{T_k}(1) = F_N(k-1)
+\eeqn
 
 \easysubproblem{Write the assumptions and the main result of the Binomial-Negative Binomial relationships (an equivalence of two probability statements and then an equivalence using the CDF's of the Binomial and the Negative Binomial models).}\spc{3}
 
-\easysubproblem{Assume $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5 < 1}$ using the two different ways (i.e. via the Poisson Process relationship).}\spc{2}
+\easysubproblem{Assume $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5 < 1}$ using the two different ways (i.e. via the Poisson Process relationship).}
+
+We know by the convolution of exponentials that
+
+\beqn
+X_1 + X_2 + X_3 + X_4 + X_5 = T_5 \sim \erlang{5}{\lambda}
+\eeqn
+
+So one easy way to calculate this probability is:
+
+\beqn
+\prob{X_1 + X_2 + X_3 + X_4 + X_5 < 1} = \prob{T_5 < 1} = F_{T_5}(1) 
+\eeqn
+
+Using the $N \sim \poisson{\lambda}$ is slightly harder. Using our answer in (a), we can derive:
+
+\beqn
+1 - F_{T_k}(1) = F_N(k-1) \mathimplies 1 - F_N(k-1) = F_{T_k}(1)
+\eeqn
+
+which means that we can get our second answer as
+
+\beqn
+\prob{X_1 + X_2 + X_3 + X_4 + X_5 < 1} = 1 - F_N(4) 
+\eeqn
+
+This is equivalent to $\prob{N \geq 5} = \prob{N = 5} + \prob{N = 6} + \ldots$. 
+
+What is the intution here? If you are waiting for $k$ $\iid \exponential{\lambda}$ events to occur / happen / realize in sequence then the probability of waiting for less than 1 second means that $k$ or more events happened before 1 second. 
 
 
 \easysubproblem{Let $N \sim \poisson{\lambda}$. Describe a way to se the realizations from the r.v.'s $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$ to create a realization $n$ from the Poisson model.}\spc{2}
 
-\hardsubproblem{Assume $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5  < m}$ where $m \in \naturals$ using two different ways (i.e. via the Poisson Process relationship).}\spc{2}
+\hardsubproblem{Assume $X_1, X_2, X_3, \ldots \iid \exponential{\lambda}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5  < m}$ where $m \in \naturals$ using two different ways (i.e. via the Poisson Process relationship).}
+
+Using our answer from (c), we can easily use the Erlang CDF again replacing the 1 with $m$:
+
+
+\beqn
+\prob{X_1 + X_2 + X_3 + X_4 + X_5 < m} = \prob{T_5 < m} = F_{T_5}(m) 
+\eeqn
+
+If $N \sim \poisson{\lambda}$ models the number of events in 1 second, then $N_1 + N_2 + \ldots + N_m$ model the number of events in $m$ seconds. Since the exponentials are $\iid$, the number occuring in each second are also $\iid$ meaning $N_1, N_2, \ldots, N_m \iid \poisson{\lambda}$ and we proved in a previous homework that a convolution of Poissons is Poisson, so $N_1 + N_2 + \ldots + N_m \sim \poisson{m\lambda}$.
+
+So now we use our answer from (c) switching the single $N$ model with our sum model:
+
+\beqn
+\prob{X_1 + X_2 + X_3 + X_4 + X_5 < m} = 1 - F_{N_1 + N_2 + \ldots + N_m}(4) 
+\eeqn
 
 
 \intermediatesubproblem{Assume $X_1, X_2, X_3, \ldots \iid \geometric{p}$. Calculate $\prob{X_1 + X_2 + X_3 + X_4 + X_5  < 10}$ using two different ways (i.e. via the Binomial-Negative Binomial relationship).}\spc{2}
