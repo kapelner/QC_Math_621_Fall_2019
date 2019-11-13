@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\title{Math 368 / 621 Fall 2019 \\ Midterm Examination Two}
+\author{Professor Adam Kapelner}
+
+\date{November 13, 2019}
+
+\begin{document}
+\maketitle
+
+\noindent Full Name \line(1,0){220} Circle Section and Class: A~B~C ~~ 368~621 
+
+\thispagestyle{empty}
+
+\section*{Code of Academic Integrity}
+
+\footnotesize
+Since the college is an academic community, its fundamental purpose is the pursuit of knowledge. Essential to the success of this educational mission is a commitment to the principles of academic integrity. Every member of the college community is responsible for upholding the highest standards of honesty at all times. Students, as members of the community, are also responsible for adhering to the principles and spirit of the following Code of Academic Integrity.
+
+Activities that have the effect or intention of interfering with education, pursuit of knowledge, or fair evaluation of a student's performance are prohibited. Examples of such activities include but are not limited to the following definitions:
+
+\paragraph{Cheating} Using or attempting to use unauthorized assistance, material, or study aids in examinations or other academic work or preventing, or attempting to prevent, another from using authorized assistance, material, or study aids. Example: using an unauthorized cheat sheet in a quiz or exam, altering a graded exam and resubmitting it for a better grade, etc.
+\\
+
+\noindent I acknowledge and agree to uphold this Code of Academic Integrity. \\
+
+\begin{center}
+\line(1,0){250} ~~~ \line(1,0){100}\\
+~~~~~~~~~~~~~~~~~~~~~signature~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ date
+\end{center}
+
+\normalsize
+
+\vspace{-1cm}
+\section*{Instructions}
+
+This exam is seventy five minutes and closed-book. You are allowed one page (front and back) of a \qu{cheat sheet.} You may use a graphing calculator of your choice. Please read the questions carefully. If the question reads \qu{compute,} this means the solution will be a number otherwise you can leave the answer in choose, permutation, exponent, factorial or any other notation which could be resolved to a number with a computer. Questions marked \qu{[MA]} are required for those enrolled in 621 and extra credit for those enrolled in 368. If you are enrolled in 368, I advise you to finish the other questions on the exam and only then attempt the extra credit. Questions marked \qu{[Extra Credit]} are extra credit for both 368 and 621 students. I also advise you to use pencil. The exam is 100 points total plus extra credit. Partial credit will be granted for incomplete answers on most of the questions. \fbox{Box} in your final answers. Good luck!
+
+\pagebreak
+
+\problem Below are some theoretical exercises.
+
+
+\benum
+
+
+\subquestionwithpoints{6} Let $X \sim \text{Weibull}(k, \lambda)$ and $c$ is a positive constant. Circle the statement(s) that are true.
+
+\begin{enumerate}
+\item Let $k = 0.53$. $\prob{X > c} < \cprob{X > 2c}{X > c}$
+\item Let $k = 0.53$. $\prob{X > c} > \cprob{X > 2c}{X > c}$
+\item Let $k = 1$. $\prob{X > c} < \cprob{X > 2c}{X > c}$
+\item Let $k = 1$. $\prob{X > c} > \cprob{X > 2c}{X > c}$
+\end{enumerate}
+
+\subquestionwithpoints{6} Let $X \sim \text{ParetoI}(1, \lambda)$ Let $f_X(x)$ denote its density and $F_X(x)$ denote its CDF, both valid for all $x \in \reals$. Set $\lambda$ so that the 80-20 Pareto Principle holds. Circle the statement(s) that are true.
+
+\begin{enumerate}
+\item $Q[X, 0.8] = Q[X, 0.2]$
+\item $Q[X, 0.8] = f_X(0.8)$
+\item $Q[X, 0.8] = F_X(0.8)$
+\item $ \frac{\displaystyle\int_{-\infty}^{F^{-1}_X(0.8)} x f_X(x)}{\displaystyle\expe{X}} = 0.2$
+\item $\lambda = 0.8$
+\end{enumerate}
+
+
+\subquestionwithpoints{10} Let $X_1, X_2, \ldots \iid \exponential{\lambda}$ and $N \sim \poisson{\lambda}$. Each statement below is either true or false. Circle the statement(s) that are true.
+
+\begin{enumerate}
+\item $N = X_1 + X_2 + \ldots + X_k$
+\item $X_1 + X_2 + \ldots + X_k \sim \text{Gamma}(k, \lambda)$
+\item $\prob{X_1 + X_2 + \ldots + X_k < 1} = Q(k, \lambda)$
+\item $\prob{X_1 + X_2 + \ldots + X_k < 1} = P(k, \lambda)$
+\item $\prob{N < 1} = Q(k, \lambda)$
+\item $\prob{N < 1} = P(k, \lambda)$
+\item $\prob{N < k} = Q(k, \lambda)$
+\item $\prob{N < k} = P(k, \lambda)$
+\item $\prob{X_1 + X_2 + \ldots + X_k > 1} = \prob{N < k}$
+\end{enumerate}
+
+
+
+
+\subquestionwithpoints{6} Consider a continuous r.v. $X$ with known CDF $F_X$ Let $Y = -X$ and find the CDF of $Y$ in terms of $F_X$.  \spc{1}
+
+\subquestionwithpoints{8} Let $X_1, X_2 \iid \text{Logistic}\parens{0, 1}$. Provide an expression for the $\prob{X_1 + X_2 > a}$ where $a \in \reals$ is a constant. Your answer must consist of just numbers, symbols and no brand name notation e.g. $\int_\reals \oneover{1 + x^2} dx$ but not  $\int_{\support{X_1}} \text{Logistic}\parens{0, 1} dx$. Do NOT simplify! \spc{5}
+
+%\subquestionwithpoints{6} Assume $\Gamma(\half) = \sqrt{\pi}$ and show that $\Gamma(\frac{5}{2}) = \frac{3}{4}\sqrt{\pi}$. \spc{1}
+
+
+
+\subquestionwithpoints{6} Let $X \sim \poisson{\lambda}$ and let $Y = g(X) = \sqrt{X}$. Find its PMF $p_Y(y)$ and make sure $p_Y(y)$ is valid $\forall y \in \reals$. Do NOT simplify. \spc{4}
+
+\subquestionwithpoints{4} Let $X \sim \text{BetaPrime}(\alpha, \beta) := \oneover{B(\alpha, \beta)} \frac{x^{\alpha - 1}}{(x + 1)^{\alpha + \beta}} \indic{x \geq 0}$. Decompose the PDF of $X$ into $c \cdot k(x)$ where $k(x)$ is the kernel and $c$ is the normalization constant. \spc{1}
+%
+%\beqn
+%c &=& \\
+%&& \\
+%&& \\
+%k(x) &=& \\
+%&&\\
+%\eeqn
+
+\subquestionwithpoints{6} Let $X \sim \text{BetaPrime}(\alpha, \beta)$. Prove that $X^{-1} \sim \text{BetaPrime}(\beta, \alpha)$. \spc{10}
+
+%\subquestionwithpoints{6} Let $X \sim \text{Gamma}\parens{\alpha, \beta}$ and let $Y = g(X) = X^{-1}$. Find its PDF $f_Y(y)$ and make sure $f_Y(y)$ is valid $\forall y \in \reals$. \spc{10}
+
+
+
+\subquestionwithpoints{8} Consider dependent continuous r.v.'s $X_1, X_2$ with known JDF $f_{X_1, X_2}(x_1, x_2)$ valid for all $x_1, x_2 \in \reals$. Consider the transformation of these r.v.'s of $H = \frac{X_1}{\natlog{X_2}}$. Find a formula that will allow you to compute its PDF $f_H(h)$ in terms of the JDF. \spc{7}
+
+
+\subquestionwithpoints{8} Let $X_1, X_2 \iid \text{Laplace}(0,1)$ and let $R = \frac{X_1}{X_2}$. Write a mathematical expression for $f_R(r)$. Do NOT simplify! \spc{4}
+
+
+
+\subquestionwithpoints{8} Let $\Xoneton \iid \exponential{\lambda}$. Find the distribution of their minimum. If it is a brand name r.v. we studied, indicate it with the value(s) of its parameters. \spc{5}
+
+\subquestionwithpoints{8} Let $X_1, \ldots, X_{37} \iid \stduniform$. Find $\prob{X_{(17)} \leq \half}$. Express your answer in terms of the regularized incomplete beta function. \spc{8}
+
+\subquestionwithpoints{8} If $X_1, X_2 \iid \text{ExtNegBin}(k, p) := \frac{\Gamma(k + x)}{\Gamma(k)x!} (1 - p)^x p^k \indic{x \in \naturals_0}$ who share the ch.f. $\phi_X(t) = \tothepow{\frac{1-p}{1-pe^{it}}}{k}$, show that $T = X_1 + X_2$ is also distributed as a ExtNegBin and find its parameters. If you use the following properties of ch.f.'s make sure to reference them in your proof by saying \qu{(P1)}, \qu{(P2)}, etc.
+
+\footnotesize
+\begin{itemize}
+\item[(P0)] $\phi_X(0) = 1$
+\item[(P1)] $\phi_X(t) = \phi_Y(t)$ is equivalent to $X \equalsindist Y$
+\item[(P2)] If $Y = aX + b$ then $\phi_Y(t) = e^{ibt}\phi_X(at)$
+\item[(P3)] If $X_1, X_2 \inddist$ and $T = X_1 + X_2$ then $\phi_T(t) = \phi_{X_1}(t) \phi_{X_2}(t)$ and if $X_1, X_2 \iid$ then $\phi_T(t) = \phi_{X}(t)^2$
+\item[(P4)] For any moment that exists, $\expe{X^n} = \phi^{(n)}_X(0) / i^n$
+\end{itemize}
+\normalsize~\spc{6}
+
+
+\subquestionwithpoints{8} [MA] If $Y~|~X = x \sim \text{ExtNegBin}(k, x)$ and $X \sim \betanot{\alpha}{\beta}$. Find the PMF of $Y$, a r.v. model you have not seen yet. Simplify \textit{as much as possible}. For those curious, $Y \sim \text{BetaNegBin}(k, \alpha, \beta)$, appropriately named the \qu{beta negative binomial}. \spc{8}
+
+\subquestionwithpoints{6} [Extra Credit] If $Y~|~X = x \sim \binomial{10}{x}$ and $X \sim \betanot{\alpha}{\beta}$ where $Y$ models the number of male births for women who have 10 children and $x$ is the probability of having a male child (assuming each child's gender is an independent and identically distributed process). If Jane had 2 girls, what is the distribution of her $X$? \spc{1}
+
+
+
+
+\eenum
+
+\end{document}
+

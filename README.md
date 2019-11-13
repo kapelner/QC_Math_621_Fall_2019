@@ -66,7 +66,7 @@ This class has prerequesites of basic probability (Math 241), some linear algebr
 
 * Midterm I, September 25 [(exam)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm1/midterm1.pdf) [(solutions)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm1/midterm1_solutions.pdf)
 
-* Midterm II, November 13 (in class). 
+* Midterm II, November 13 (in class) [(exam)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm2/midterm2.pdf) [(solutions)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm2/midterm2_solutions.pdf)
 
 * Final, December 16 and 18 with a possible reschedule (stay tuned).
 

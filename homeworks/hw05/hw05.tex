@@ -208,13 +208,21 @@ Find $\mu, \sigma, \xi$ that correspond to the r.v.'s $R, F, G$. Thus was discov
 \easysubproblem{Can $Y$ be called a compound distribution? Y/N}\spc{0}
 
 
-\hardsubproblem{If somone has 5 kids, what is the probability they are Mormon according to our model?}\spc{6}
+\hardsubproblem{If somone has 5 kids, what is the probability they are Mormon according to our model?}\spc{7}
 
 \easysubproblem{Show that if $Y~|X=x \sim \poisson{x}$ and $X \sim \text{Gamma}(\alpha, \beta)$ then $Y \sim \text{ExtNegBinomial}\parens{\alpha, \frac{\beta}{1 + \beta}}$. Draw a tree of this model too. Marked easy because we did this in class but we left out one step. Hint: find the kernel of the $\text{ExtNegBinomial}\parens{\alpha, \frac{\beta}{1 + \beta}}$ distribution.}\spc{13}
 
 \hardsubproblem{Show that if $Y~|X=x \sim \exponential{x}$ and $X \sim \text{Gamma}(\alpha, \beta)$ then $Y \sim \text{Lomax}(\alpha, \beta)$. You will need to look up the Lomax distribution on wikipedia. Draw a tree of this model too.}\spc{10}
 
-\hardsubproblem{[MA] Find the PDF of the compound distribution $Y$ if $Y~|~X_1=x_1,~X_2=x_2 \sim \betanot{x_1}{x_2}$ where $X_1 \sim \gammadist{\alpha_1}{\beta_1}$ independent of $X_2 \sim \gammadist{\alpha_2}{\beta_2}$. Draw a tree of this model. Get as far as you can.}\spc{6}
+\hardsubproblem{[MA] Get as far as you can when finding the PDF of the compound distribution $Y$ if 
+
+\beqn
+X_1 &\sim& \gammadist{\alpha_1}{\beta_1} \\
+X_2 &\sim& \gammadist{\alpha_2}{\beta_2} \\
+Y~|~X_1=x_1,~X_2=x_2 &\sim& \betanot{x_1}{x_2}
+\eeqn
+
+where $X_1$ and $X_2$ are independent. Also, draw a tree of this model.}\spc{6}
 
 %
 %\easysubproblem{Can this be considered an \qu{overdispersed} beta? Yes/no.}\spc{0}
