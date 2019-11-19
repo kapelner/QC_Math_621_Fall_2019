@@ -1,0 +1,186 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 368/621 Fall 2019 Homework \#7}
+
+\author{Professor Adam Kapelner} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due under the door of KY604 11:59PM Thursday, December 12, 2019 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+Reading is still \textit{required}. For this homework set, read on your own about ......
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
+
+This homework is worth 100 points but the point distribution will not be determined until after the due date. See syllabus for the policy on late homework.
+
+Up to 7 points are given as a bonus if the homework is typed using \LaTeX. Links to instaling \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{overleaf.com}. If you are handing in homework this way, read the comments in the code; there are two lines to comment out and you should replace my name with yours and write your section. The easiest way to use overleaf is to copy the raw text from hwxx.tex and preamble.tex into two new overleaf tex files with the same name. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+The document is available with spaces for you to write your answers. If not using \LaTeX, print this document and write in your answers. I do not accept homeworks which are \textit{not} on this printout. Keep this first page printed for your records.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+\noindent NAME: \line(1,0){240} ~SECTION: \line(1,0){30} ~CLASS: 368 | 621
+\clearpage
+}
+
+\end{document}
+
+
+\problem{Introducing the king: the normal distribution $\mathcal{N}$ and his princes/sses: the lognormal distribution Log$\mathcal{N}$, chi-squared distribution $\chi^2_k$, Student's T distribution $T_k$ and Fisher-Snecodor's distribution $F_{k_1,k_2}$.}
+
+\begin{enumerate}
+
+\easysubproblem{Let $X_1 \sim \normnot{\mu_1}{\sigsq_1}$ independent of $X_2 \sim \normnot{\mu_2}{\sigsq_2}$. Prove $X_1 + X_2 \sim  \normnot{\mu_1 + \mu_2}{\sigsq_1 + \sigsq_2}$ using ch.f.'s.}\spc{5}
+
+\extracreditsubproblem{Let $X_1 \sim \normnot{\mu_1}{\sigsq_1}$ independent of $X_2 \sim \normnot{\mu_2}{\sigsq_2}$. Prove $X_1 + X_2 \sim  \normnot{\mu_1 + \mu_2}{\sigsq_1 + \sigsq_2}$ using the definition of convolution on a separate page. This is in the book but try not to look at it.}\spc{0}
+
+\intermediatesubproblem{Let $X \sim \normnot{\mu}{\sigsq}$ and $Y=X \indic{X \geq a}$. Find $f_Y(y)$.}\spc{6}
+
+\easysubproblem{Let $X \sim \lognormnot{\mu}{\sigsq}$ and $Y=\natlog{X}$. How is $Y$ distributed? Use a heuristic argument. No need to actually change variables.}\spc{3}
+
+
+\intermediatesubproblem{Let $X_1 \sim \lognormnot{\mu_1}{\sigsq_1}$, $X_2 \sim \lognormnot{\mu_2}{\sigsq_2}, \ldots, X_n \sim \lognormnot{\mu_n}{\sigsq_n}$ all independent of each other and $Y=\prod_{i=1}^n X_i$. How is $Y$ distributed? Use a heuristic argument. No need to actually change variables.}\spc{3}
+
+\intermediatesubproblem{The average return of the S\&P 500 stock index since 1928 is 11.4\% and the standard deviation is 19.7\%. Assume for the purposes of this problem that percentage returns is normally distributed (even though it is not true in practice). If you put \$1,000 into the stock market, what is the probability you have \$5,000 after 10 years? The \texttt{R} function you need is \texttt{plnorm}.}\spc{6}
+
+
+\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots, k_1, \ldots) \sim \chisq{k}$ where $k_1, \ldots$ represents constants.}\spc{3}
+
+\easysubproblem{Let $X \sim \chisq{k}$, find the kernel of $f_X(x)$.}\spc{3}
+
+
+\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots, k_1, \ldots) \sim F_{k_1,k_2}$ where $k_1, \ldots$ represents constants.}\spc{3}
+
+\easysubproblem{Let $X \sim F_{k_1,k_2}$, find the kernel of $f_X(x)$.}\spc{3}
+
+\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots, k_1, \ldots) \sim T_{k}$ where $k_1, \ldots$ represents constants.}\spc{3}
+
+\easysubproblem{Let $X \sim T_k$, find the kernel of $f_X(x)$.}\spc{3}
+
+
+\easysubproblem{Let $X \sim \cauchy{0}{1}$, find the kernel of $f_X(x)$.}\spc{3}
+
+\easysubproblem{Using $Z_1,  Z_2, \ldots \iid \stdnormnot$, find a function $g$ s.t. $g(Z_1,  Z_2, \ldots, k_1, \ldots) \sim \cauchy{0}{1}$ where $k_1, \ldots$ represents constants.}\spc{1}
+
+\easysubproblem{Let $X \sim \cauchy{0}{1}$, prove that $\expe{X}$ does not exist.}\spc{5}
+
+
+\extracreditsubproblem{Show that the PDF of $X \sim T_k$, converges to the PDF of $Z \sim \stdnormnot$ when $k \rightarrow \infty$. Hint: use Stirling's approximation.}\spc{17}
+\end{enumerate}
+
+\problem{The $\chi^2$ r.v. within Cochran's Theorem.}
+
+\begin{enumerate}
+
+\easysubproblem{Given $\Xoneton \iid f(\mu,\sigsq)$, a density with finite variance, state the classic estimator $S^2$ (a r.v.) and the estimate (a scalar value) for $\sigsq$, the variance of the $X$'s.}\spc{1}
+
+\hardsubproblem{Prove this estimator is unbiased i.e $\expe{\cdot} = \sigsq$. The answer is online but try to do it yourself.}\spc{12}
+
+
+\easysubproblem{Given $\Xoneton \iid f(\mu,\sigsq)$, a density with finite variance, state the classic estimator $S$ (a r.v.) and the estimate (a scalar value) for $\sigma$, the standard error of the $X$'s.}\spc{3}
+
+\hardsubproblem{[MA] Prove this estimator is \textit{biased} i.e $\expe{\cdot} \neq \sigma$.}\spc{12}
+
+\easysubproblem{State Cochran's Theorem.}\spc{4}
+
+\easysubproblem{Given $\Xoneton \iid \normnot{\mu}{\sigsq}$ Show that $\sum_{i=1}^n \squared{\frac{X_i - \mu}{\sigma}} \sim \chisq{n}$.}\spc{3}
+
+\easysubproblem{Express $\sum_{i=1}^n \squared{\frac{X_i - \mu}{\sigma}}$ in vector notation.}\spc{1}
+
+\easysubproblem{Express $\sum_{i=1}^n \squared{\frac{X_i - \mu}{\sigma}}$ as a quadratic form. What is the matrix that determines this quadratic form?}\spc{1}
+
+
+
+\easysubproblem{What is the rank of the determining matrix?}\spc{1}
+
+\easysubproblem{When computing $\sum_{i=1}^n \squared{\frac{X_i - \mu}{\sigma}}$, how many \href{https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)}{independent pieces of information} AKA \qu{degrees of freedom} go into the calculation?}\spc{1}
+
+\easysubproblem{Define degrees of freedom.}\spc{1}
+
+\easysubproblem{Show that $\sum_{i=1}^n \squared{\frac{X_i - \mu}{\sigma}} = \frac{(n-1)S^2}{\sigsq} + \frac{n(\Xbar - \mu)^2}{\sigsq}$.}\spc{4}
+
+
+\easysubproblem{Show that $\frac{n(\Xbar - \mu)^2}{\sigsq} \sim \chisq{1}$.}\spc{4}
+
+%\easysubproblem{Express $\frac{n(\Xbar - \mu)^2}{\sigsq}$ in vector notation.}\spc{4}
+
+\easysubproblem{Express $\frac{n(\Xbar - \mu)^2}{\sigsq}$ as a quadratic form. What is the matrix that determines this quadratic form? Call it $B_2$.}\spc{4}
+
+\easysubproblem{What is the rank of the determining matrix?}\spc{1}
+
+\easysubproblem{When computing $\frac{n(\Xbar - \mu)^2}{\sigsq}$, how many \href{https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)}{independent pieces of information} go into the calculation?}\spc{1}
+
+\easysubproblem{Express $\frac{(n-1)S^2}{\sigsq}$ in vector notation.}\spc{4}
+
+\intermediatesubproblem{Express $\frac{(n-1)S^2}{\sigsq}$ as a quadratic form. What is the matrix that determines this quadratic form? Call it $B_1$.}\spc{4}
+
+\intermediatesubproblem{What is the rank of the determining matrix?}\spc{1}
+
+\easysubproblem{When computing $\frac{(n-1)S^2}{\sigsq}$, how many \href{https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)}{independent pieces of information} go into the calculation?}\spc{1}
+
+\easysubproblem{What is $B_1 + B_2$? Why should this be?}\spc{3}
+
+
+\easysubproblem{What is rank$(B_1)~+~$rank$(B_2)$?}\spc{3}
+
+\easysubproblem{Show that $B_1$ is positive semi-definite (PSD).}\spc{3}
+
+\easysubproblem{Show that $B_2$ is positive semi-definite (PSD).}\spc{3}
+
+\intermediatesubproblem{Using Cochran's Theorem, show that $\frac{(n-1)S^2}{\sigsq} \sim \chisq{n-1}$ and that $\frac{(n-1)S^2}{\sigsq}$ is independent of $\frac{n(\Xbar - \mu)^2}{\sigsq}$.}\spc{6}
+
+
+\hardsubproblem{What is $B_1B_2$? Why should this be?}\spc{3}
+
+\intermediatesubproblem{Using the answer in (z), show that $\frac{\Xbar - \mu}{\oversqrtn{S}} \sim T_{n-1}$.}\spc{6}
+
+\hardsubproblem{In (d), you proved that $\expe{S^2} = \sigsq$. What is $\expe{S}$ under the assumption of $\Xoneton \iid \normnot{\mu}{\sigsq}$? You will need to read online about the $\chi$ distribution.}\spc{5}
+
+\hardsubproblem{Create a new estimator $S'$ that is unbiased for estimating $\sigma$. You can use a function of the original $S$.}\spc{8}
+
+\end{enumerate}
+
+\problem{Some questions about ch.f.'s and the MVN really quickly}
+
+\begin{enumerate}
+
+%\hardsubproblem{Let $X \sim \gammanot{\alpha}{\beta}$. Find $\phi_X(t)$. }\spc{10}
+%
+%\easysubproblem{Let $X \sim \chisq{n}$. Find $\phi_X(t)$. Hint: use (a).}\spc{3}
+
+\easysubproblem{Let $\X_1, \ldots, \X_n \iid \multnormnot{n}{\muvec}{\Sigma}$. Write the PDF of $\X_i$.}\spc{3}
+
+\easysubproblem{Find the mean $\muvec_{\xbar}$ of $\bar{\bv{X}} := \overn{\X_1 + \ldots + \X_n}$.}\spc{3}
+
+\intermediatesubproblem{Find the variance matrix $\Sigma_{\xbar}$ of $\bar{\bv{X}} := \overn{\X_1 + \ldots + \X_n}$.}\spc{3}
+
+\hardsubproblem{Use the ch.f. of the MVN to prove that $\bar{\bv{X}} \sim \multnormnot{n}{\muvec_{\xbar}}{\Sigma_{\xbar}}$ and substitute in the mean vector and variance covariance matrix answers for (b) and (c).}\spc{8}
+
+\hardsubproblem{Show that $\parens{\bar{\bv{X}} - \muvec_{\xbar}}^\top \Sigma_{\xbar}^{-1} \parens{\bar{\bv{X}} - \muvec_{\xbar}} \sim \chisq{n}$. This amounts to repeating a proof from class.}\spc{8}
+
+\intermediatesubproblem{The parameter space for the multivatiate normal distribution is $\muvec \in \reals^n$ but what is the valid space for $\Sigma$? You can get this from wikipedia. Make sure you explain the answer.}\spc{8}
+
+\end{enumerate}
+
+
+
+\end{document}

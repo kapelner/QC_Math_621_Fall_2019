@@ -107,7 +107,7 @@ Find $\mu, \sigma, \xi$ that correspond to the r.v.'s $R, F, G$. Thus was discov
 \hardsubproblem{If the kernel without the indicator function is $x^{-d}$ where $d>1$, how is $X$ distributed?}\spc{5}
 
 
-\hardsubproblem{Prove $B(\alpha, \beta) = \frac{\Gammaf{\alpha}\Gammaf{\beta}}{\Gammaf{\alpha+\beta}}$ using the method from class (i.e. the textbook) is not required.}\spc{9}
+\easysubproblem{Prove $B(\alpha, \beta) = \frac{\Gammaf{\alpha}\Gammaf{\beta}}{\Gammaf{\alpha+\beta}}$ using the method from class.}\spc{9}
 
 
 \end{enumerate}
@@ -139,10 +139,43 @@ Find $\mu, \sigma, \xi$ that correspond to the r.v.'s $R, F, G$. Thus was discov
 
 \extracreditsubproblem{If $\Xoneton \iid \uniform{a}{b}$, show that $X_{(k)}$ is a linear transformation of the beta distribution and find its parameters.}\spc{8}
 
-\intermediatesubproblem{[MA] Show that $I_x(\alpha, \beta + 1) = I_x(\alpha, \beta) + \frac{x^\alpha (1 - x)^\beta}{\beta B(\alpha, \beta)}$.}\spc{5}
+\intermediatesubproblem{[MA] Show that $I_x(\alpha, \beta + 1) = \displaystyle\frac{\beta I_x(\alpha, \beta) + x^\alpha (1 - x)^\beta}{\alpha + \beta}$.}\spc{5}
 
-\hardsubproblem{[MA] If $X \sim \binomial{n}{p}$, show that $F(x) = I_{1-p}(n-k, k+1)$}\spc{15}
+\hardsubproblem{[MA] If $X \sim \binomial{n}{p}$, show that $F(x) = I_{1-p}(n-k, k+1)$. You will need to assume the property $I_x(a,b) = 1 - I_{1-x}(b,a)$.}
 
+Assume $\Xoneton \iid \stduniform$. We know then that $F_X(x) = x$. So by the CDF formula for an order statistic $k$ and the fact that the CDF is a probability we have:
+
+\beqn
+F_{X_{(k)}}(x) &=& \sum_{j=k}^n \binom{n}{j} F_X(x)^j \tothepow{1 - F_X(x)}{n-j} \\
+&=& \sum_{j=k}^n \binom{n}{j} x^j \tothepow{1 - x}{n-j} \\
+&=& 1 - \sum_{j=0}^{k-1} \binom{n}{j} x^j \tothepow{1 - x}{n-j}
+\eeqn
+
+From class we proved that the order statistics for the standard uniform are distributed beta and we also know its CDF:
+
+\beqn
+X_{(k)} \sim \betanot{k}{n - k + 1} = \betanot{k}{n - (k - 1)} \mathimplies F_{X_{(k)}}(x) = I_x(k, n - (k - 1))
+\eeqn
+
+By the fact on \href{https://en.wikipedia.org/wiki/Beta_function}{wikipedia} about the $I$ function we have:
+
+\beqn
+F_{X_{(k)}}(x) = I_x(k, n - (k - 1)) =1 -  I_{1 - x}(n - (k - 1), k)
+\eeqn
+
+Thus we have the strange equality:
+
+\beqn
+\sum_{j=0}^{k-1} \binom{n}{j} x^j \tothepow{1 - x}{n-j} = I_{1 - x}(n - (k - 1), k)
+\eeqn
+
+Letting $y := k-1$,
+
+\beqn
+\sum_{j=0}^{y} \binom{n}{j} x^j \tothepow{1 - x}{n-j} = I_{1 - x}(n - y, y + 1)
+\eeqn
+
+Note that the lhs is the CDF for $Y \sim \binomial{n}{x}.~\blacksquare$ 
 
 \end{enumerate}
 %
@@ -186,7 +219,7 @@ Find $\mu, \sigma, \xi$ that correspond to the r.v.'s $R, F, G$. Thus was discov
 \hardsubproblem{Find a formula for the PDF of $E = X_1^{X_2}$ where $X_1, X_2 \iid f(x)$.}\spc{10}
 
 
-\hardsubproblem{Find the best formula you can for the PDF of $Q = \frac{X_1}{X_2}e^{X_3}$ where $X_1, X_2, X_3$ are dependent r.v.'s.}\spc{10}
+\hardsubproblem{Find the simplest formula you can for the PDF of $Q = \frac{X_1}{X_2}e^{X_3}$ where $X_1, X_2, X_3$ are dependent r.v.'s.}\spc{10}
 
 \hardsubproblem{Show that $R = \frac{X_1}{X_2} \sim \beta'(\alpha, \beta)$, the beta prime distribution, if $X_1 \sim \gammadist{\alpha}{1}$ independent of $X_2 \sim \gammadist{\beta}{1}$.}\spc{12}
 
@@ -201,7 +234,7 @@ Find $\mu, \sigma, \xi$ that correspond to the r.v.'s $R, F, G$. Thus was discov
 
 \hardsubproblem{[MA] Comment on the appropriateness of the Poisson model here.}\spc{1}
 
-\easysubproblem{If we are to only consider atheists and Mormons, there are about 10M atheists in the American population and about 7M Mormons in the American population. Create a r.v. $X$ which is 1 if Mormon and 0 if atheist.}\spc{1}
+\intermediatesubproblem{If we are to only consider atheists and Mormons, there are about 10M atheists in the American population and about 7M Mormons in the American population. Create a r.v. $X$ which is 3.4 if Mormon and 1.6 if atheist and find its PMF.}\spc{2}
 
 \intermediatesubproblem{If you call $Y$ the number of children someone has, find the distribution of $Y$ where atheist/Mormon status is unknown. Draw a tree of this model. }\spc{7}
 
@@ -252,9 +285,9 @@ where $X_1$ and $X_2$ are independent. Also, draw a tree of this model.}\spc{6}
 f_X(x) = \oneover{2\pi} \int_\reals e^{itx} \phi_X(t) dt.
 \eeqn
 
-Hint: use the definition of the inverse Fourier transform and make a $u$ substitution.}\spc{3}
+Hint: use the work found in \href{https://github.com/kapelner/QC_Math_621_Fall_2017/blob/master/lectures/lec14kap.pdf}{my lecture from 2017}.}\spc{2.5}
 
-\easysubproblem{Find the ch.f. of $X \sim \bernoulli{p}$.}\spc{3}
+\easysubproblem{Find the ch.f. of $X \sim \bernoulli{p}$.}\spc{2.5}
 
 \intermediatesubproblem{Find the ch.f. of $T \sim \binomial{n}{p}$. Hint: use the binomial theorem.}\spc{3}
 
@@ -264,7 +297,7 @@ Hint: use the definition of the inverse Fourier transform and make a $u$ substit
 
 \intermediatesubproblem{Using ch.f.'s, show that if $\Xoneton \iid \bernoulli{p}$, then $T = X_1 + \ldots + X_n \sim \binomial{n}{p}$.}\spc{3}
 
-\easysubproblem{Define the mgf and prove properties 0, 1, 2, 3 and 4 for mgf's.}\spc{3}
+\easysubproblem{Define the mgf and prove properties 0, 2, 3 and 4 for mgf's. (You cannot prove property 1 without advanced math).}\spc{3}
 
 \end{enumerate}
 
