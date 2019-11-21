@@ -216,6 +216,7 @@
 \newcommand{\XXtXinvXt}{\X\XtXinvXt}
 \newcommand{\x}{\bv{x}}
 \newcommand{\p}{\bv{p}}
+\renewcommand{\t}{\bv{t}}
 \newcommand{\onevec}{\bv{1}}
 \newcommand{\oneton}{1, \ldots, n}
 \newcommand{\yoneton}{y_1, \ldots, y_n}
@@ -396,11 +397,13 @@
 
 %shortcuts for distribution titles
 \newcommand{\logistic}[2]{\mathrm{Logistic}\parens{#1,\,#2}}
+\newcommand{\cauchy}[2]{\mathrm{Cauchy}\parens{#1,\,#2}}
 \newcommand{\bernoulli}[1]{\mathrm{Bernoulli}\parens{#1}}
 \newcommand{\betanot}[2]{\mathrm{Beta}\parens{#1,\,#2}}
 \newcommand{\stdbetanot}{\betanot{\alpha}{\beta}}
 \newcommand{\multnormnot}[3]{\mathcal{N}_{#1}\parens{#2,\,#3}}
 \newcommand{\normnot}[2]{\mathcal{N}\parens{#1,\,#2}}
+\newcommand{\lognormnot}[2]{\text{Log}\mathcal{N}\parens{#1,\,#2}}
 \newcommand{\classicnormnot}{\normnot{\mu}{\sigsq}}
 \newcommand{\stdnormnot}{\normnot{0}{1}}
 \newcommand{\uniformdiscrete}[1]{\mathrm{Uniform}\parens{\braces{#1}}}
