@@ -4,12 +4,11 @@ This is the course homepage for Math 368 / 621 for the Fall semester 2017 at Que
 
 ## Lectures
 
-My lectures can be listened to as youtube tracks [(all lectures)](https://www.youtube.com/playlist?list=) and lecture notes are also scanned in as PDF files contributed by students and myself.
+My lectures can be listened to as youtube tracks and lecture notes are also scanned in as PDF files contributed by students and myself.
 
-<!--
-* Lecture 23 [(audio)](https://youtu.be/sBA4Lf_5kUU) [(Alassane Ngaide)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec23ngaide.pdf) [(Prof)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec23kap.pdf) -->
-* Lecture 22 [(audio)](https://youtu.be/Bc5iJrCnOC4) [(Jan Bazant)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec22bazant.pdf) [(Prof)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec22kap.pdf)
-* Lecture 21 [(audio)](https://youtu.be/WauV6OYKbr4) [(Jan Bazant)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec21bazant.pdf) [(Prof)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec21kap.pdf) 
+* Lecture 23 [(audio)](https://youtu.be/wBnEpHUo5Og) [(Jan Bazant)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec23bazant.pdf) [(Mike Digiorgio)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec23digiorgio.pdf) [(Prof)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec23kap.pdf)
+* Lecture 22 [(audio)](https://youtu.be/Bc5iJrCnOC4) [(Jan Bazant)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec22bazant.pdf) [(Mike Digiorgio)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec22digiorgio.pdf) [(Selina Shahriar)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec22shahriar.pdf) [(Steven Grgas)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec22grgas.pdf) [(Prof)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec22kap.pdf)
+* Lecture 21 [(audio)](https://youtu.be/WauV6OYKbr4) [(Selina Shahriar)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec21shahriar.pdf) [(Jan Bazant)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec21bazant.pdf) [(Prof)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec21kap.pdf) 
 * Linear Regression Notes (not on exam) [(Jan Bazant)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/econometrics_bonus_bazant.pdf) [(Ruby Chang)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/econometrics_bonus_chang.pdf) [(Adriana Sham)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/econometrics_bonus_sham.pdf) [(Antonio DAlessandro)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/econometrics_bonus_dalessandro.pdf) [(Prof)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/econometrics_bonus_prof.pdf)
 * Lecture 20 [(audio)](https://youtu.be/q22A5PNjPYo) [(Jan Bazant)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec20bazant.pdf) [(Mike Digiorgio)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec20digiorgio.pdf) [(Ruby Chang)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec20chang.pdf) [(Adriana Sham)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec20sham.pdf) [(Antonio DAlessandro)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec20dalessandro.pdf) [(Prof)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec20kap.pdf)
 * Lecture 19 [(audio)](https://youtu.be/en_N3l0D5I4) [(Jan Bazant)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec19bazant.pdf) [(Selina Shahriar)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec19shahriar.pdf) [(Adriana Sham)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec19sham.pdf) [(Mike Digiorgio)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec19digiorgio.pdf) [(Antonio DAlessandro)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec19dalessandro.pdf) [(Prof)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/lectures/lec19kap.pdf)
@@ -62,7 +61,7 @@ This class has prerequesites of basic probability (Math 241), some linear algebr
 
 * Midterm II, November 13 (in class) [(exam)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm2/midterm2.pdf) [(solutions)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm2/midterm2_solutions.pdf)
 
-* Final, December 16 and 18 with a possible reschedule (stay tuned).
+* Final, December 16. Come to any of the following periods: 1:45, 6:15, 10PM
 
 ## Practice Exams
 
