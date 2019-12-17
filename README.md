@@ -1,6 +1,6 @@
 # MATH 368 / 621 Fall 2019
 
-This is the course homepage for Math 368 / 621 for the Fall semester 2017 at Queens College, City University of New York taught by Professor Adam Kapelner. The syllabus can be read [here](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/syllabus/syllabus.pdf) and downloaded [here](https://raw.githubusercontent.com/kapelner/QC_Math_621_Fall_2019/master/syllabus/syllabus.pdf). This course parallels the previous time it was taught and the previous course homepage is [here](https://github.com/kapelner/QC_Math_621_Fall_2017).
+This is the course homepage for Math 368 / 621 for the Fall semester 2019 at Queens College, City University of New York taught by Professor Adam Kapelner. The syllabus can be read [here](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/syllabus/syllabus.pdf) and downloaded [here](https://raw.githubusercontent.com/kapelner/QC_Math_621_Fall_2019/master/syllabus/syllabus.pdf). This course parallels the previous time it was taught and the previous course homepage is [here](https://github.com/kapelner/QC_Math_621_Fall_2017).
 
 ## Lectures
 
@@ -57,11 +57,11 @@ This class has prerequesites of basic probability (Math 241), some linear algebr
 
 ## Exams
 
-* Midterm I, September 25 [(exam)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm1/midterm1.pdf) [(solutions)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm1/midterm1_solutions.pdf)
+* Midterm I, September 25 (in class) [(exam)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm1/midterm1.pdf) [(solutions)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm1/midterm1_solutions.pdf)
 
 * Midterm II, November 13 (in class) [(exam)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm2/midterm2.pdf) [(solutions)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/midterm2/midterm2_solutions.pdf)
 
-* Final, December 16. Come to any of the following periods: 1:45, 6:15, 10PM
+* Final, December 16 [(exam)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/final/final.pdf) [(solutions)](https://github.com/kapelner/QC_Math_621_Fall_2019/blob/master/exams/final/final_solutions.pdf)
 
 ## Practice Exams
 
